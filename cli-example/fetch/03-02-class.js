@@ -3,7 +3,7 @@ const fetch = require("node-fetch")
 class PlaceHolder {
   constructor(callback=null) {
     this.baseURL = 'https://jsonplaceholder.typicode.com'
-    this.headers = { 'options-type': 'application/json; charset=UTF-8' }
+    this.headers = { 'Content-type': 'application/json; charset=UTF-8' }
     this.callback = callback
   }
 
@@ -25,20 +25,20 @@ class PlaceHolder {
 
   // Public Method
   readAll() {
-    this._request(`${this.baseURL}/bodys`)
+    this._request(`${this.baseURL}/posts`)
   }
 
   read(id) {
-    this._request(`${this.baseURL}/bodys/${id}`)
+    this._request(`${this.baseURL}/posts/${id}`)
   }
 
   create(body) {
     const options = {
-      method: 'body',
+      method: 'POST',
       body: JSON.stringify(body),
       headers: this.headers
     }
-    this._request(`${this.baseURL}/bodys`, options)
+    this._request(`${this.baseURL}/posts`, options)
   }
 
   update(id, body) {
@@ -47,7 +47,7 @@ class PlaceHolder {
       body: JSON.stringify(body),
       headers: this.headers
     }
-    this._request(`${this.baseURL}/bodys/${id}`, options)
+    this._request(`${this.baseURL}/posts/${id}`, options)
   }
 
   patch(id, body) {
@@ -56,12 +56,12 @@ class PlaceHolder {
       body: JSON.stringify(body),
       headers: this.headers
     }
-    this._request(`${this.baseURL}/bodys/${id}`, options)
+    this._request(`${this.baseURL}/posts/${id}`, options)
   }
 
   async delete(id) {
     try {
-      const url = `${this.baseURL}/bodys/${id}`
+      const url = `${this.baseURL}/posts/${id}`
       const response = await fetch(url, { method: 'DELETE' })
       const json = await response.json()
     } catch(err) {
@@ -94,7 +94,7 @@ const placeholder = new PlaceHolder( (json, response) => {
 // const body = { id: 1, title: 'foo', body: 'bar',  userId: 1 }
 // placeholder.update(1, body)
 
-// 5: Updating a resource with PUT
+// 5: Updating a resource with PATCH
 // const body = { id: 1, title: 'foo' }
 // placeholder.patch(1, body)
 
