@@ -1,4 +1,4 @@
-// Listing first post
+// Getting a resource
 const axios   = require('axios').default;
 const baseURL = 'https://jsonplaceholder.typicode.com'
 const id      = 1
