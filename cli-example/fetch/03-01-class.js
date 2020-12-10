@@ -7,16 +7,12 @@ class PlaceHolder {
   }
 
   // Private Method (using # at tc39)
-  _show(json) {
-    console.log(json)
-  }
-  
   async _request(url, options = null) {
     try {
       const response = options === null ?
         await fetch(url) : await fetch(url, options)
       const json = await response.json()
-      this._show(json)
+      return json
     } catch(err) {
       console.log(err.message)
     }
@@ -24,11 +20,11 @@ class PlaceHolder {
 
   // Public Method
   readAll() {
-    this._request(`${this.baseURL}/posts`)
+    return this._request(`${this.baseURL}/posts`)
   }
 
   read(id) {
-    this._request(`${this.baseURL}/posts/${id}`)
+    return this._request(`${this.baseURL}/posts/${id}`)
   }
 
   create(body) {
@@ -37,7 +33,7 @@ class PlaceHolder {
       body: JSON.stringify(body),
       headers: this.headers
     }
-    this._request(`${this.baseURL}/posts`, options)
+    return this._request(`${this.baseURL}/posts`, options)
   }
 
   update(id, body) {
@@ -46,7 +42,7 @@ class PlaceHolder {
       body: JSON.stringify(body),
       headers: this.headers
     }
-    this._request(`${this.baseURL}/posts/${id}`, options)
+    return this._request(`${this.baseURL}/posts/${id}`, options)
   }
 
   patch(id, body) {
@@ -55,7 +51,7 @@ class PlaceHolder {
       body: JSON.stringify(body),
       headers: this.headers
     }
-    this._request(`${this.baseURL}/posts/${id}`, options)
+    return this._request(`${this.baseURL}/posts/${id}`, options)
   }
 
   async delete(id) {
@@ -71,25 +67,31 @@ class PlaceHolder {
 
 /* Example Usage */
 
-const placeholder = new PlaceHolder();
+const placeholder = new PlaceHolder()
 
 // 1: Listing all resources
 // placeholder.readAll()
+//   .then(json => console.log(json))
 
 // 2: Listing first body
 // placeholder.read(1)
+//  .then(json => console.log(json))
 
 // 3: Creating a resource
 // const body = { title: 'foo', body: 'bar',  userId: 1 }
 // placeholder.create(body)
+//   .then(json => console.log(json))
 
 // 4: Updating a resource with PUT
-//const body = { id: 1, title: 'foo', body: 'bar',  userId: 1 }
-//placeholder.update(1, body)
+// const body = { id: 1, title: 'foo', body: 'bar',  userId: 1 }
+// placeholder.update(1, body)
+//  .then(json => console.log(json))
 
 // 5: Updating a resource with PATCH
 // const body = { id: 1, title: 'foo' }
 // placeholder.patch(1, body)
+//   .then(json => console.log(json))
 
 // 6: Deleting a resource
 // placeholder.delete(1)
+

@@ -78,7 +78,7 @@ const placeholder = new PlaceHolder( (json, response) => {
   } else {
     console.log(`status [${response.status}]`)
   }
-});
+})
 
 // 1: Listing all resources
 // placeholder.readAll()
