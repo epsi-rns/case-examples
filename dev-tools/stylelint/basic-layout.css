@@ -1,0 +1,20 @@
+/* Main Layout: Mobile First */
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs * {
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .tabs {
+    flex-direction: row;
+  }
+  
+  .tabs>* {
+    min-height: 320px;
+  }
+}

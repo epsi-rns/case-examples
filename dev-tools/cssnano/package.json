@@ -1,0 +1,13 @@
+{
+  "name": "postcss-cssnano-test",
+  "author": "Epsiarto Rizqi Nurwijayadi",
+  "homepage": "https://gitlab.com/epsi-rns/css-tools/",
+  "version": "0.1.0",
+  "description": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "postcss": "^8.2.0",
+    "postcss-cli": "^8.3.0"
+  }
+}
