@@ -3,7 +3,6 @@ module Main where
 import Prelude
 
 import Effect.Console (log)
-import Debug.Trace (traceM)
 
 data Person = Person { name :: String, age :: Int }
 
