@@ -1,7 +1,7 @@
 module Step21 where
 import Prelude
 import Effect.Console (log)
-import Data.Array (concat, filter, nub)
+import Data.Array (concat, nub)
 import MySongs
 
 type Tags = Array String
