@@ -1,7 +1,7 @@
 module Step06 where
 import Prelude
-import Effect.Console (log)
 import Data.Array (filter)
+import Effect.Console (log)
 
 exclude :: String -> Array String -> Array String
 exclude tag xs = filter((/=) tag) xs

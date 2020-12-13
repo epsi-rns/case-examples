@@ -6,6 +6,7 @@ data Tags = Tags [String]
 data Song = Song { title :: String, tags :: Maybe Tags }
         deriving (Show)
 
+songs :: [Song]
 songs = [
     Song { title = "Cantaloupe Island",
            tags = Just (Tags ["60s", "jazz"]) },

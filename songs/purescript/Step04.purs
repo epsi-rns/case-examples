@@ -3,6 +3,6 @@ import Prelude
 import Effect.Console (log)
 import MySongs
 
-main = log $ show $ songs
+main = log $ show songs
 
 
