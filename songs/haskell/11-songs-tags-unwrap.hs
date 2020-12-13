@@ -8,8 +8,8 @@ tagsFromJust Nothing  = error "Maybe.tagFromJust: Nothing"
 tagsFromJust (Just tags) = tags
 
 flattenTags :: [Maybe Tags] -> [Tags]
-flattenTags tagsList = [ 
-    tagsFromJust maybeTags | maybeTags <- tagsList,
+flattenTags aTagsList = [ 
+    tagsFromJust maybeTags | maybeTags <- aTagsList,
     maybeTags /= Nothing
   ]
 

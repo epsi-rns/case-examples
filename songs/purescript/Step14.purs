@@ -13,7 +13,7 @@ tagsFromJust Nothing  = []
 tagsFromJust (Just tags) = tags
 
 flattenTags :: Array (Maybe Tags) -> Tags
-flattenTags tagsArray = concat
-       $ (map tagsFromJust) tagsArray
+flattenTags aTagsArray = concat
+       $ (map tagsFromJust) aTagsArray
 
 main = log $ show $ nub $ flattenTags $ tagsArray $ songs

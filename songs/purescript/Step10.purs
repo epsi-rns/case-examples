@@ -9,6 +9,6 @@ tagsArray :: Array Song -> Array (Maybe Tags)
 tagsArray songs = map (\song -> song.tags) songs
 
 flattenTags :: Array (Maybe Tags) -> Array (Maybe Tags)
-flattenTags tagsArray = filter ((/=) Nothing) tagsArray
+flattenTags aTagsArray = filter ((/=) Nothing) aTagsArray
 
 main = log $ show $ flattenTags $ tagsArray $ songs

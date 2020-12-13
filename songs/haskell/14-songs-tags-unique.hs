@@ -11,8 +11,8 @@ unwrapTags :: Tags -> [String]
 unwrapTags (Tags tags) = [ tag | tag <- tags ]
 
 flattenTags :: [Maybe Tags] -> [String]
-flattenTags tagsList = concat [
-    unwrapTags $ tagsFromJust maybeTags | maybeTags <- tagsList
+flattenTags aTagsList = concat [
+    unwrapTags $ tagsFromJust maybeTags | maybeTags <- aTagsList
   ]
 
 exclude :: String -> [String] -> [String]

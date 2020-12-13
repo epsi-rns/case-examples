@@ -18,7 +18,7 @@ tagsFromJust Nothing  = error "Maybe.fromJust: Nothing"
 tagsFromJust (Just tags) = tags
 
 flattenTags :: Array (Maybe Tags) -> Array Tags
-flattenTags tagsArray = (map tagsFromJust)
-        $ (filter ((/=) Nothing) tagsArray)
+flattenTags aTagsArray = (map tagsFromJust)
+        $ (filter ((/=) Nothing) aTagsArray)
 
 main = log $ show $ flattenTags $ tagsArray $ songs

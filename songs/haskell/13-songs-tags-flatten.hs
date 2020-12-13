@@ -11,8 +11,8 @@ unwrap :: Tags -> [String]
 unwrap (Tags tags) = [ tag | tag <- tags ]
 
 flattenTags :: [Maybe Tags] -> [String]
-flattenTags tagsList = concat [
-    unwrap $ tagsFromJust maybeTags | maybeTags <- tagsList
+flattenTags aTagsList = concat [
+    unwrap $ tagsFromJust maybeTags | maybeTags <- aTagsList
   ]
 
 main = print (flattenTags $ tagsList songs)

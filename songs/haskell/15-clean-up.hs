@@ -8,7 +8,7 @@ fromTags Nothing  = []
 fromTags (Just (Tags tags)) = map id tags
 
 flattenTags :: [Maybe Tags] -> [String]
-flattenTags tagsList = concat $ map fromTags tagsList
+flattenTags aTagsList = concat $ map fromTags aTagsList
 
 unique :: [String] -> [String]
 unique [] = []
