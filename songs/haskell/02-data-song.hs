@@ -6,4 +6,4 @@ song :: Song
 song = Song { title = "Cantaloupe Island",
               tags = Tags ["60s", "jazz"] }
 
-main = print $ (tags song)
+main = print (tags song)

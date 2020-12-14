@@ -1,19 +1,15 @@
 import MySongs
+import Data.Maybe
 
-tagsList :: [Song] -> [Maybe Tags]
-tagsList songs = map tags songs
-
-fromTags :: Maybe Tags -> [String]
-fromTags Nothing  = []
-fromTags (Just (Tags tags)) = map id tags
+unwrapTags :: Tags -> [String]
+unwrapTags (Tags tags) = tags
 
 flattenTags :: [Maybe Tags] -> [String]
-flattenTags aTagsList = concat $ map fromTags aTagsList
+flattenTags aTagsList = concat
+        $ ((map unwrapTags) (catMaybes aTagsList))
 
 unique :: [String] -> [String]
 unique [] = []
 unique (tag:tags) = tag:unique(filter((/=) tag) tags)
 
-main = print (unique $ flattenTags $ tagsList songs)
-
-
+main = print (unique $ flattenTags $ (map tags songs))

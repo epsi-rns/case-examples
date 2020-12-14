@@ -1,18 +1,11 @@
 import MySongs
-
-tagsList :: [Song] -> [Maybe Tags]
-tagsList songs = [ tags song | song <- songs ]
-
-tagsFromJust :: Maybe Tags -> Tags
-tagsFromJust Nothing  = Tags []
-tagsFromJust (Just tags) = tags
+import Data.Maybe
 
 unwrap :: Tags -> [String]
-unwrap (Tags tags) = [ tag | tag <- tags ]
+unwrap (Tags tags) = tags
 
 flattenTags :: [Maybe Tags] -> [[String]]
-flattenTags aTagsList = [
-    unwrap $ tagsFromJust maybeTags | maybeTags <- aTagsList
-  ]
+flattenTags aTagsList = (map unwrap)
+        $ (catMaybes aTagsList)
 
-main = print (flattenTags $ tagsList songs)
+main = print $ flattenTags $ (map tags songs)

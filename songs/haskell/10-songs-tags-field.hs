@@ -8,4 +8,4 @@ flattenTags aTagsList = [
     maybeTags | maybeTags <- aTagsList, maybeTags /= Nothing
   ]
 
-main = print (flattenTags $ tagsList $ songs)
+main = print $ flattenTags $ tagsList $ songs

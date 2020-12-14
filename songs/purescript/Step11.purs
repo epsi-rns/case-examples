@@ -11,7 +11,7 @@ error :: forall a. String -> a
 error = unsafePerformEffect <<< throw
 
 tagsArray :: Array Song -> Array (Maybe Tags)
-tagsArray songs = map (\song -> song.tags) songs
+tagsArray songs = map (_.tags) songs
 
 tagsFromJust :: Maybe Tags -> Tags
 tagsFromJust Nothing  = error "Maybe.fromJust: Nothing"

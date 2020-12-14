@@ -6,7 +6,7 @@ import MySongs
 import Effect.Console (log)
 
 tagsArray :: Array Song -> Array (Maybe Tags)
-tagsArray songs = map (\song -> song.tags) songs
+tagsArray songs = map (_.tags) songs
 
 tagsFromJust :: Maybe Tags -> Tags
 tagsFromJust Nothing  = []

@@ -1,9 +1,11 @@
 import MySongs
 import Data.List
+import Data.Maybe
 
-fromTags Nothing  = []
-fromTags (Just (Tags tags)) = tags
+unwrapTags :: Tags -> [String]
+unwrapTags (Tags tags) = tags
 
 main = print $ nub $ concat 
-             $ (map fromTags) 
+             $ (map unwrapTags)
+             $ catMaybes
              $ (map tags songs)

@@ -22,4 +22,4 @@ songs = [
   ]
 
 main = log $ show $ nub $ concat
-        $ map (\song -> song.tags) $ songs
+        $ map (_.tags) $ songs
