@@ -1,7 +1,7 @@
 import { Song, songs } from "./songs-data";
 
-type   Unique = (array: Array<string>) => Array<string>;
-const  unique : Unique = (array) => [... new Set(array)];
+type   Unique  = (array: Array<string>) => Array<string>;
+const  unique  : Unique = (array) => [... new Set(array)];
 
 type  PickTags = (song: Song) => Array<string>;
 const pickTags : PickTags = (song) => song.tags!
