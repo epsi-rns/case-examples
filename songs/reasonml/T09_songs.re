@@ -5,7 +5,7 @@ let lsongs = Songs.lsongs
 
 let lsongToTags = (lsong) => {
   let {Songs.ltags: mytags} = lsong;
-  Belt.Option.getWithDefault(lsong.ltags, [])
+  Belt.Option.getWithDefault(mytags, [])
 }
 
 let lo_tags = L.map (lsongs, lsongToTags)

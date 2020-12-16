@@ -5,11 +5,10 @@ module S = StdLabels.List
 open MySongs
 open MyTags
 
-Js.log(
-  L.map (Songs.lsongs, (lsong) => 
+
+L.map (Songs.lsongs, (lsong) => 
     O.getWithDefault(lsong.Songs.ltags, [])
-  ) 
-  |> S.flatten 
+) |> S.flatten 
   |> Tags.unique 
   |> Array.of_list
-)
+  |> Js.log
