@@ -6,6 +6,7 @@ module Tags = {
     switch lst {
     | [] => []
     | [x] => [x]
-    | [x, ...xs] => [x, ...unique(exclude(x, [...xs]))]
+    | [x, ...xs] => 
+        [x, ...unique(exclude(x, [...xs]))]
   };
 }
