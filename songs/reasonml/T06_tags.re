@@ -8,7 +8,7 @@ let rec exclude = (_val, lst) =>
   | [x, ...xs] when x === _val => exclude(_val, [...xs])
   | [x, ...xs] when x !== _val => [x, ...exclude(_val, [...xs])]
   | [x, ...xs] => [x, ...xs] // surpress warning
-};
+}
 
 Js.log(tags |> exclude("rock") |> Array.of_list)
 
