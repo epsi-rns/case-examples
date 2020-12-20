@@ -4,7 +4,7 @@ module S = StdLabels.List
 open MySongs
 
 let lsongToTags = (lsong) => {
- O.getWithDefault(lsong.Songs.ltags, [])
+  O.getWithDefault(lsong.Songs.ltags, [])
 }
 
 let l_tags = L.map (Songs.lsongs, lsongToTags) 
