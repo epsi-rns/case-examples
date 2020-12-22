@@ -1,5 +1,5 @@
--module(t06_rec). 
--export([show/0]). 
+-module(t06_rec).
+-export([show/0]).
 
 -record(song, { title, tags = [] }).
 

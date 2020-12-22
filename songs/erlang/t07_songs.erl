@@ -1,5 +1,5 @@
--module(t07_songs). 
--export([show/0]). 
+-module(t07_songs).
+-export([show/0]).
 
 -record(song,  { title, tags = [] }).
 
@@ -15,6 +15,6 @@ show() ->
            tags  = ["70s", "pop"] },
     #song{ title = "The River"}
   ],
-  [ io:fwrite("~60p~n",
-    [Head#song.tags]) || Head <- Songs
+  [ io:fwrite("~60p~n", [Head#song.tags])
+    || Head <- Songs
   ].
