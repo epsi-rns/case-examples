@@ -3,7 +3,7 @@
 -import(lists, [append/1]).
 -import(set, [from_list/1, to_list/1]).
 -export([show/0]).
--record(song,  { title, tags = [] }).
+-include("my_header.hrl").
 
 unique(List) -> sets:to_list(sets:from_list(List)).
 

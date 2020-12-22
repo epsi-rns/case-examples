@@ -1,9 +1,6 @@
 -module(my_songs).
 -export([songs/0]).
-
--record(song,  { title, tags = [] }).
-% -type song() :: #song{}.
-% -export_type([song/0]). 
+-include("my_header.hrl").
 
 songs() -> [
   #song{ title = "Cantaloupe Island",

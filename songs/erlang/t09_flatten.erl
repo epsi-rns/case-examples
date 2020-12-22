@@ -2,8 +2,7 @@
 -import(my_songs, [songs/0]).
 -import(lists, [append/1]).
 -export([show/0]).
-
--record(song,  { title, tags = [] }).
+-include("my_header.hrl").
 
 show() ->
   Songs = songs(),
