@@ -5,7 +5,7 @@
             :url "https://www.eclipse.org/legal/epl-2.0/"}
   :dependencies [[org.clojure/clojure "1.10.1"]]
   :plugins [[lein-exec "0.3.7"]]
-  :main nil
+  :main noob.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all
                        :jvm-opts ["-Dclojure.compiler.direct-linking=true"]}
@@ -19,6 +19,7 @@
              :t06-curry   {:main t06-curry}
              :t07-flatten {:main t07-flatten}
              :t08-unique  {:main t08-unique}
+             :t09-pipe    {:main t09-pipe}
           }
   :aliases {"alohascript" ["exec" "scripts/aloha.clj"]
             "hola"  ["with-profile" "hola"  "run"]
