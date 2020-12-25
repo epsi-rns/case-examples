@@ -11,18 +11,18 @@
                        :jvm-opts ["-Dclojure.compiler.direct-linking=true"]}
              :hola  {:main hola}
              :aloha {:main aloha}
-             :t01-tags    {:main t01-tags}
-             :t02-record  {:main t02-record}
-             :t03-songs   {:main t03-songs}
-             :t04-module  {:main t04-module}
-             :t05-extract {:main t05-extract}
-             :t06-curry   {:main t06-curry}
-             :t07-flatten {:main t07-flatten}
-             :t08-unique  {:main t08-unique}
-             :t09-pipe    {:main t09-pipe}
-          }
+             :t01-tags     {:main t01-tags}
+             :t02-record   {:main t02-record}
+             :t03-songs    {:main t03-songs}
+             :t04-module   {:main t04-module}
+             :t05-extract  {:main t05-extract}
+             :t06-function {:main t06-function}
+             :t07-flatten  {:main t07-flatten}
+             :t08-unique   {:main t08-unique}
+             :t09-pipe     {:main t09-pipe}
+            }
   :aliases {"alohascript" ["exec" "scripts/aloha.clj"]
             "hola"  ["with-profile" "hola"  "run"]
             "aloha" ["with-profile" "aloha" "run"]
-          }
+           }
   )

@@ -1,4 +1,4 @@
-(ns t06-curry (:gen-class) (:use my-songs))
+(ns t06-function (:gen-class) (:use my-songs))
 
 (defn extract
   [songs]
