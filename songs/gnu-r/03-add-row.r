@@ -1,17 +1,27 @@
 library(tibble)
 
-tibble(
+dataframe <- tibble(
   title = "Cantaloupe Island",
   tags  = list(list("60s", "jazz"))
-) %>% add_row(
+)
+
+dataframe <- add_row(dataframe,
   title = "Let It Be",
   tags  = list(list("60s", "rock"))
-) %>% add_row(
+)
+
+dataframe <- dataframe %>% add_row(
   title = "Knockin' on Heaven's Door",
   tags  = list(list("70s", "rock"))
-) %>% add_row(
+)
+
+add_row(dataframe,
   title = "Emotion",
   tags  = list(list("70s", "pop"))
-) %>% add_row(
+) -> dataframe
+
+dataframe %>% add_row(
   title = "The River"
 ) -> dataframe
+
+dataframe %>% print
