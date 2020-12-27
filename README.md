@@ -1,3 +1,3 @@
-# Tutor Ecmascript
+# Case Examples
 
-Every journey begins with a single step. Ecmascript, NodeJS, CLI, DOM, Javascript, Typescript, Purescript.
+Miscellanous case examples for tutorial purpose.
