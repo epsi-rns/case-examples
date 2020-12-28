@@ -2,10 +2,11 @@ import songs from "./songs-data.js";
 
 // using map without returning value is considered anti pattern.
 
-const addTags      = (tagSet, tags) => tags.map(tag => tagSet.add(tag));
-const addSongTags  = (tagSet, song) => 
-        song.tags? addTags(tagSet, song.tags) : undefined;
-const addSongsTags = (tagSet, songs) =>
+const
+  addTags      = (tagSet, tags) => tags.map(tag => tagSet.add(tag)),
+  addSongTags  = (tagSet, song) => 
+        song.tags? addTags(tagSet, song.tags) : undefined,
+  addSongsTags = (tagSet, songs) =>
         songs.map(song => addSongTags(tagSet, song));
 
 // using set feature to collect tag names

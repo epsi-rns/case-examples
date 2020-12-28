@@ -1,7 +1,8 @@
 import songs from "./songs-data.js";
 
-const unique = array => [... new Set(array)];
-const merge  = (array1, array2) => [...array1, ...array2];
+const
+  unique = array => [... new Set(array)],
+  merge  = (array1, array2) => [...array1, ...array2];
 
 let allTags = [];
 
