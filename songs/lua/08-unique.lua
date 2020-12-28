@@ -23,8 +23,7 @@ end
 -- https://stackoverflow.com/questions/20066835/lua-remove-duplicate-elements
 
 function unique(tags)
-  local hash = {}
-  local res  = {}
+  local hash, res = {}, {}
 
   for _,tag in pairs(tags) do
     if (not hash[tag]) then
