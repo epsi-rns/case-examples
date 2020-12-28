@@ -7,9 +7,10 @@ type Mergable = (
   array2: Array<string>
 ) => Array<string>;
 
-const unique      : Unique   = (a)    => [... new Set(a)];
-const merge       : Mergable = (a, b) => [...a, ...b];
-const mergeUnique : Mergable = (a,b)  => unique(merge(a, b));
+const
+  unique      : Unique   = (a)    => [... new Set(a)],
+  merge       : Mergable = (a, b) => [...a, ...b],
+  mergeUnique : Mergable = (a,b)  => unique(merge(a, b));
 
 let allTags: Array<string> = [];
 
