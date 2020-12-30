@@ -1,9 +1,9 @@
-const unique = <T>(tags: Array<T>): Array<T> => {
+const unique = <T>(tags: T[]): T[] => {
   if (tags.length <= 1) {
     return tags
   } else {
 	const [head, ...tail] = tags
-    const newTails: Array<T> =
+    const newTails: T[] =
       unique(tail.filter(tag => tag != head))
 
     return [head, ...newTails]
