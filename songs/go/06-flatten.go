@@ -1,16 +1,16 @@
 package main
 
 import (
-	"fmt"
 	"example.com/mysongs"
+	"fmt"
 )
 
 func flatten(songs []mysongs.Song) []string {
 	var tags []string
 
-	for _, song := range songs{
+	for _, song := range songs {
 		if song.Tags != nil {
-			for _, tag := range song.Tags{
+			for _, tag := range song.Tags {
 				tags = append(tags, tag)
 			}
 		}
@@ -20,6 +20,6 @@ func flatten(songs []mysongs.Song) []string {
 }
 
 func main() {
-	tags := flatten(mysongs.Songs())
+	tags := flatten(mysongs.GetSongs())
 	fmt.Println(tags)
 }

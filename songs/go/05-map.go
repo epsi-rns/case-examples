@@ -1,14 +1,14 @@
 package main
 
 import (
-	"fmt"
 	"example.com/mysongs"
+	"fmt"
 )
 
 func mapAndFilter(songs []mysongs.Song) [][]string {
 	var tagss [][]string
 
-	for _, song := range songs{
+	for _, song := range songs {
 		if song.Tags != nil {
 			tagss = append(tagss, song.Tags)
 		}
@@ -18,8 +18,6 @@ func mapAndFilter(songs []mysongs.Song) [][]string {
 }
 
 func main() {
-	tagss := mapAndFilter(mysongs.Songs())
+	tagss := mapAndFilter(mysongs.GetSongs())
 	fmt.Println(tagss)
 }
-
-

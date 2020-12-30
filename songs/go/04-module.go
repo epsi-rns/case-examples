@@ -1,12 +1,12 @@
 package main
 
 import (
-	"fmt"
 	"example.com/mysongs"
+	"fmt"
 )
 
 func main() {
-	for _, song := range mysongs.Songs(){
+	for _, song := range mysongs.Songs() {
 		fmt.Println(song)
 	}
 }

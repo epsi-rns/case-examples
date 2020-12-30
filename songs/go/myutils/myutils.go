@@ -3,7 +3,7 @@ package myutils
 func exclude(value string, tags []string) []string {
 	var newTags []string
 
-	for _, tag := range tags{
+	for _, tag := range tags {
 		if tag != value {
 			newTags = append(newTags, tag)
 		}

@@ -5,7 +5,9 @@ type Song struct {
 	Tags  []string
 }
 
-func Songs() ([]Song) {
+type Songs []Song
+
+func GetSongs() Songs{
 	songs := []Song{
 		Song{"Cantaloupe Island",
 			[]string{"60s", "jazz"}},
@@ -20,4 +22,18 @@ func Songs() ([]Song) {
 	}
 
 	return songs
+}
+
+func (songs Songs) FlattenTags() []string {
+	var tags []string
+
+	for _, song := range songs {
+		if song.Tags != nil {
+			for _, tag := range song.Tags {
+				tags = append(tags, tag)
+			}
+		}
+	}
+
+	return tags
 }

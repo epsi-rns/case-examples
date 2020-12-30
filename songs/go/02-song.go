@@ -9,8 +9,7 @@ type Song struct {
 
 func main() {
 	var song = Song{"Cantaloupe Island",
-					[]string{"60s", "jazz"}}
+		[]string{"60s", "jazz"}}
 
 	fmt.Println(song)
 }
-

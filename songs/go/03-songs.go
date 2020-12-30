@@ -21,7 +21,7 @@ func main() {
 			nil},
 	}
 
-	for _, song := range songs{
+	for _, song := range songs {
 		fmt.Println(song)
 	}
 }

@@ -5,7 +5,7 @@ import "fmt"
 func exclude(value string, tags []string) []string {
 	var newTags []string
 
-	for _, tag := range tags{
+	for _, tag := range tags {
 		if tag != value {
 			newTags = append(newTags, tag)
 		}
@@ -31,6 +31,6 @@ func unique(tags []string) []string {
 func main() {
 	var tags = []string{
 		"rock", "jazz", "rock", "pop", "pop"}
-	
+
 	fmt.Println(unique(tags))
 }

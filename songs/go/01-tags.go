@@ -7,4 +7,3 @@ func main() {
 		"rock", "jazz", "rock", "pop", "pop"}
 	fmt.Println(tags)
 }
-
