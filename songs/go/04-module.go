@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	for _, song := range mysongs.Songs() {
+	for _, song := range mysongs.GetSongs() {
 		fmt.Println(song)
 	}
 }
