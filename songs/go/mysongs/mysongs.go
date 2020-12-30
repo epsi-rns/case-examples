@@ -8,7 +8,7 @@ type Song struct {
 type Songs []Song
 
 func GetSongs() Songs{
-	songs := []Song{
+	return []Song{
 		Song{"Cantaloupe Island",
 			[]string{"60s", "jazz"}},
 		Song{"Let It Be",
@@ -20,8 +20,6 @@ func GetSongs() Songs{
 		Song{"The River",
 			nil},
 	}
-
-	return songs
 }
 
 func (songs Songs) FlattenTags() []string {
