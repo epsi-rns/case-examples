@@ -13,7 +13,7 @@ impl<'lt> fmt::Display for Song<'lt> {
 
 fn main() {
     let song = Song {
-		title: "Cantaloupe Island",
+        title: "Cantaloupe Island",
         tags: vec!["60s", "jazz"]
     };
 
