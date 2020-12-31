@@ -1,8 +1,8 @@
 use std::fmt;
 
 pub struct Song<'lt> {
-	title: &'lt str,
-	pub tags : Option<Vec<&'lt str>>
+    title: &'lt str,
+    pub tags : Option<Vec<&'lt str>>
 }
 
 impl<'lt> fmt::Display for Song<'lt> {
