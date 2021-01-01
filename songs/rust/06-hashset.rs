@@ -16,5 +16,5 @@ fn main() {
     let hashtags: HashSet<&str> =
         HashSet::from_iter(tags.iter().cloned());
     
-    println!("{:?}", hashtags);
+    println!("{:?}", hashtags)
 }
