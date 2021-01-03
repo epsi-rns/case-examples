@@ -13,5 +13,5 @@ let songs : List<MySong> = [
   { Title = "Emotion";
     Tags  = Some ["70s"; "pop"]};
   { Title = "The River";
-    Tags  = Some []};
+    Tags  = None};
   ]

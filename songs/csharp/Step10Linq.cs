@@ -4,7 +4,7 @@ using System.Linq;
 class Step10Linq
 {
   public void Show() {
-     // 1. Data source.
+    // 1. Data source.
     var songs = new MySongs().songs;
 
     // 2. Query creation.
