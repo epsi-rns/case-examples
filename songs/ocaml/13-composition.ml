@@ -1,4 +1,4 @@
-#use "topfind"
+#use "topfind";;
 #require "batteries";;
 open Batteries;;
 
