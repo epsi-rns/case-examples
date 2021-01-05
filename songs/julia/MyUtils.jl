@@ -2,21 +2,13 @@ module MyUtils
 
 export unique
 
-function exclude(
-  value::T,tags::Array{T}
-)::Array{T} where {T<:Any}
-  return [ tag for tag in tags if tag != value ]
-end
-
-function unique(
-  tags::Array{T}
-)::Array{T} where {T<:Any}
+function unique(tags::Array{T})::Array{T} where {T<:Any}
   if length(tags) <= 1
     return tags
   else
     head = popfirst!(tags)
-    tail = unique(exclude(head, tags))
-    return pushfirst!(tail, head)
+    excluded = [ tag for tag in tags if tag != head ]
+    return pushfirst!(unique(excluded), head)
   end  
 end
 
