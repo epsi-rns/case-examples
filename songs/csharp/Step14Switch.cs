@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Linq;
 
-class Step13Unique
+class Step14Switch
 {
   private string[] tags;
 
-  public Step13Unique() {
+  public Step14Switch() {
     tags = new string[5]
       {"rock", "jazz", "rock", "pop", "pop"};
   }
@@ -15,18 +15,22 @@ class Step13Unique
     return excluded.ToArray();
   }
 
+  public string[] Unique2(string[] tags) {
+    string   head = tags.FirstOrDefault();
+    string[] tail = tags.Skip(1).ToArray();
+
+    string[] newhead = new string[1] {head};
+    string[] newtail = Unique(Exclude(head, tail));
+
+    return newhead.Concat(newtail).ToArray();
+  }
+
   public string[] Unique(string[] tags) {
-    if (tags.Length <=1) {
-      return tags;
-    } else {
-      string   head = tags.FirstOrDefault();
-      string[] tail = tags.Skip(1).ToArray();
-
-      string[] newhead = new string[1] {head};
-      string[] newtail = Unique(Exclude(head, tail));
-
-      return newhead.Concat(newtail).ToArray();
-    }
+    return tags switch {
+      { Length: 0 } => tags,
+      { Length: 1 } => tags,
+      _ => Unique2(tags)
+    };
   }
 
   public void Show() {

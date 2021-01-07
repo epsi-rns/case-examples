@@ -1,10 +1,10 @@
 ﻿using System;
 
-class Step14Generics
+class Step15Generics
 {
   private string[] tags;
 
-  public Step14Generics() {
+  public Step15Generics() {
     tags = new string[5]
       {"rock", "jazz", "rock", "pop", "pop"};
   }
