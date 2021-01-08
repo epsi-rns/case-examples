@@ -7,7 +7,7 @@ import (
 )
 
 func flatten(wg *sync.WaitGroup,
-  songs []mysongs.Song, tags *[]string) {
+	songs []mysongs.Song, tags *[]string) {
 	defer wg.Done()
 
 	for _, song := range songs {

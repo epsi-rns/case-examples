@@ -5,6 +5,20 @@ import (
 	"fmt"
 )
 
+func flatten(message chan string, quit chan int) {
+	songs := mysongs.GetSongs()
+
+	for _, song := range songs {
+		if song.Tags != nil {
+			for _, tag := range song.Tags {
+				message <- tag
+			}
+		}
+	}
+
+	quit <- 0
+}
+
 func walk(message chan string, quit chan int) {
 	var tags []string
 	var tag string
@@ -18,20 +32,6 @@ func walk(message chan string, quit chan int) {
 			return
 		}
 	}
-}
-
-func flatten(message chan string, quit chan int) {
-	songs := mysongs.GetSongs()
-
-	for _, song := range songs {
-		if song.Tags != nil {
-			for _, tag := range song.Tags {
-				message <- tag
-			}
-		}
-	}
-
-	quit <- 0
 }
 
 func main() {
