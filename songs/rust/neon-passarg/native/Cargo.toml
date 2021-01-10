@@ -1,0 +1,19 @@
+[package]
+name = "passing-parameter-argument"
+version = "0.1.0"
+authors = ["epsi sayidina <epsi.nurwijayadi@gmail.com>"]
+license = "MIT"
+build = "build.rs"
+edition = "2018"
+exclude = ["artifacts.json", "index.node"]
+
+[lib]
+name = "thread_count"
+crate-type = ["cdylib"]
+
+[build-dependencies]
+neon-build = "0.7.0"
+
+[dependencies]
+neon = "0.7.0"
+num_cpus = "1.4.0"

@@ -5,7 +5,13 @@ pub struct Song {
     pub tags : Option<Vec<String>>
 }
 
-fn to_strings(vec_str: Vec<&str>) -> Option<Vec<String>> {
+impl fmt::Display for Song {
+    fn fmt(&self, f: &mut fmt::Formatter)-> fmt::Result {
+        write!(f, "({}, {:?})", self.title, self.tags)
+    }
+}
+
+pub fn to_strings(vec_str: Vec<&str>) -> Option<Vec<String>> {
     let new_strings: Vec<String>;
 
     new_strings = vec_str
@@ -16,12 +22,7 @@ fn to_strings(vec_str: Vec<&str>) -> Option<Vec<String>> {
     Some(new_strings)
 }
 
-impl fmt::Display for Song {
-    fn fmt(&self, f: &mut fmt::Formatter)-> fmt::Result {
-        write!(f, "({}, {:?})", self.title, self.tags)
-    }
-}
-
+#[allow(dead_code)]
 pub fn get_songs() -> Vec<Song> {
     vec![
         Song {  title: "Cantaloupe Island".to_string(),
