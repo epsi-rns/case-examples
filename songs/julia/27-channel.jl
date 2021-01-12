@@ -1,5 +1,3 @@
-using Base.Iterators
-
 include("MyUtils.jl")
 include("MySongs.jl")
 using .MySongs
