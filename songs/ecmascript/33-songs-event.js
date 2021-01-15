@@ -1,5 +1,5 @@
 import songs from "./songs-data.js"
-import { EventEmitter } from"events"
+import { EventEmitter } from "events"
 
 // Receiver/Customer
 const walk = (eventEmitter) => {
