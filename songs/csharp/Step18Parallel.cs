@@ -9,16 +9,18 @@ class Step18Parallel
   {
     MySongs mySongs = new MySongs();
 
-    Parallel.ForEach(mySongs.songs, song => {
-      if (song.Tags != null) {
-        Parallel.ForEach(song.Tags, async (tag) => {
-          await writer.WriteAsync(tag);
-        });
-      };
-    });
-   
+    await Task.Run(() => 
+      Parallel.ForEach(mySongs.songs, song => {
+        if (song.Tags != null) {
+          Parallel.ForEach(song.Tags, tag => {
+            writer.WriteAsync(tag);
+          });
+        };
+      })
+    );
+
+    Task.WaitAll();
     writer.Complete();
-    await Task.FromResult(1);
     return;
   }
 
