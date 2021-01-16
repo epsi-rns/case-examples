@@ -17,7 +17,8 @@
     // Step14Switch step = new Step14Switch();
     // Step15Generics step = new Step15Generics();
     // Step16Unique step = new Step16Unique();
-    Step17Channel step = new Step17Channel();
+    // Step17Channel step = new Step17Channel();
+    Step18Parallel step = new Step18Parallel();
     step.Show();
   }
 }
