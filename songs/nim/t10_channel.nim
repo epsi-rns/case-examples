@@ -22,19 +22,22 @@ proc receiver() =
         echo tags
         break
 
-# Initialize the channel.
-chan.open()
+proc runBoth() =
+  # Initialize the channel.
+  chan.open()
 
-# Launch the worker.
-var worker1: Thread[seq[Song]]
-createThread[seq[Song]](worker1, sender, songs)
+  # Launch the worker.
+  var worker1: Thread[seq[Song]]
+  createThread[seq[Song]](worker1, sender, songs)
 
-var worker2: Thread[void]
-createThread(worker2, receiver)
+  var worker2: Thread[void]
+  createThread(worker2, receiver)
 
-# Wait for the thread to exit
-worker1.joinThread()
-worker2.joinThread()
+  # Wait for the thread to exit
+  worker1.joinThread()
+  worker2.joinThread()
 
-# Clean up the channel.
-chan.close()
+  # Clean up the channel.
+  chan.close()
+
+runBoth()
