@@ -1,5 +1,3 @@
-require "./my-songs"
-
 def sender(channel)
   songs.each do |song| 
     if song.tags != [] of String
@@ -23,6 +21,7 @@ def receiver(channel)
   end
 end
 
+require "./my-songs"
 channel = Channel(String | Nil).new
 spawn sender(channel)
 spawn receiver(channel)
