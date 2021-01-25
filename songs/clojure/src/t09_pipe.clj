@@ -7,7 +7,7 @@
 
 (defn -main [& args]
   (->> songs
-       (extract) 
+       (extract)
        (flatten)
        (distinct)
        (println)))
