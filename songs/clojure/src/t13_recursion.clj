@@ -6,8 +6,7 @@
   ([numbers]
     (if (<= (count numbers) 10)
       (collect-random (conj numbers (rand-int 100)))
-      (println numbers)
-    )
+      (println numbers))
   ))
 
 (defn -main [& args] (collect-random))

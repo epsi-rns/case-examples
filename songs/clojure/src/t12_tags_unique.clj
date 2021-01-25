@@ -2,8 +2,7 @@
 (def tags ["rock" "jazz" "rock" "pop" "pop"])
 
 (defn exclude [value items]
-  (filter #(not= value %) items)
-)
+  (filter #(not= value %) items))
 
 (defn unique [items]
   (if (<= (count items) 1)

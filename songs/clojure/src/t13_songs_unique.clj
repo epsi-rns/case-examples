@@ -8,7 +8,6 @@
         (swap! tags conj tag))))
   (deref tags))
 
-
 (defn exclude [value items]
   (filter #(not= value %) items))
 
