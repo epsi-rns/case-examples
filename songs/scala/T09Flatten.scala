@@ -1,4 +1,5 @@
 import mysongs._
+import mysongs.MySongs._
 
 object T09 extends App {
   def songsFlatten(songs: List[Song])
@@ -7,5 +8,5 @@ object T09 extends App {
         tag <- song.tags.get
       ) yield tag
 
-  println(songsFlatten(MySongs.songs))
+  println(songsFlatten(songs))
 }

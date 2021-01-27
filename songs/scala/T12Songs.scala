@@ -1,10 +1,11 @@
 import mysongs._
+import mysongs.MySongs._
 
 object T12 extends App {
   def songsFlatten(songs: List[Song])
     = for (
         song <- songs if song.tags != None;
-        tag <- song.tags.get
+        tag  <- song.tags.get
       ) yield tag
 
   def exclude(value: String, tags: List[String])
@@ -19,6 +20,5 @@ object T12 extends App {
          case x::xs  => x::unique(exclude(x, xs))
        }
 
-  println(unique(songsFlatten(MySongs.songs)))
+  println(unique(songsFlatten(songs)))
 }
-
