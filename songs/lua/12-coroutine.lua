@@ -21,8 +21,7 @@ function receiver (prod)
 
   while true do
     -- receive message
-    local status, message =
-      coroutine.resume(prod)
+    local status, message = coroutine.resume(prod)
 
     if message==nil
       then break
