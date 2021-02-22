@@ -3,10 +3,6 @@
 let join_str my_tags : string =
   "[" ^ (String.concat ", " my_tags) ^ "]";;
 
-let unwrap = function
-  | Some x -> x
-  | None -> [];;
-
 let all_tags my_songs: tl_tags list
   = List.filter_map (
     fun my_song -> my_song.tags
