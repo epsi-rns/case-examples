@@ -7,4 +7,4 @@ tags = [
     for tag in song['tags']
 ]
 
-pprint(list(set(tags)))
+pprint(tags)

@@ -1,7 +1,6 @@
 import threading, queue
 from MySongs import songs
 
-# https://docs.python.org/3/library/queue.html
 q = queue.Queue()
 tags = []
 
@@ -16,7 +15,6 @@ def receiver():
         tags.append(item)
       q.task_done()
 
-# send thirty task requests to the worker
 def sender():
   for song in songs:
     if 'tags' in song:
