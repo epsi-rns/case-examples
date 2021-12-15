@@ -24,11 +24,15 @@ def sender():
         q.put(tag)
   q.put(None)
 
-# turn-on the worker thread
-threading.Thread(target=receiver, daemon=True).start()
+def main():
+  # turn-on the worker thread
+  threading.Thread(
+    target=receiver, daemon=True
+  ).start()
 
-# block until all tasks are done
-sender()
-q.join()
-print(tags)
+  # block until all tasks are done
+  sender()
+  q.join()
+  print(tags)
 
+main()
