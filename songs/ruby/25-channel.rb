@@ -1,7 +1,9 @@
 def sender(channel, songs)
   songs.each do |song| 
     if song['tags'] != nil
-      song['tags'].each { |tag| channel << tag }
+      song['tags'].each do |tag|
+        channel << tag
+      end
     end
   end
   channel << nil

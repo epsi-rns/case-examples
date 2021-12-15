@@ -5,7 +5,7 @@ def flatten(songs)
   tags = []
   
   songs.each { |song| 
-    if song['tags'] != nil
+    unless song['tags'] == nil
        song['tags'].each { |tag| tags << tag }
    end  
   }

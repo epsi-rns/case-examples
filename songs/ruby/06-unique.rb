@@ -1,10 +1,10 @@
 require_relative 'MySongs'
 include Songs
 
-tagss = SONGS
+tags = SONGS
   .map { |song| song['tags'] }
-  .select { |tags| tags != nil } 
+  .compact
   .flatten
   .uniq
 
-puts "#{tagss}"
+puts "#{tags}"
