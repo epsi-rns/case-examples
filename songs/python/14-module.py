@@ -1,4 +1,4 @@
 from pprint import pprint
-from MySongs import songs
+from MyTupleSongs import songs
 
 pprint(songs)
