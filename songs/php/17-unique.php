@@ -11,5 +11,4 @@ $tags =
           $songs)
   )));
 
-
 printf("%s\n", json_encode($tags));

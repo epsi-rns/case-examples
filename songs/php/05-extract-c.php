@@ -2,7 +2,7 @@
 require_once(__DIR__.'/MySongs.php');
 
 $songs = array_filter($songs, function ($song) {
-  return array_key_exists('tags', $song);
+  return isset($song['tags']);
 });
 
 $tagss = array_map(function ($song) {

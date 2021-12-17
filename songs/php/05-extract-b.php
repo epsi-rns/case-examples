@@ -2,7 +2,8 @@
 require_once(__DIR__.'/MySongs.php');
 
 function walk($song) {
-  return $song['tags'] ? $song['tags'] : null;
+  return isset($song['tags']) ?
+    $song['tags'] : null;
 }
 
 $tagss = array_map('walk', $songs);
