@@ -1,6 +1,6 @@
 <?php
 $song = [ 'title' => 'Cantaloupe Island',
-         'tags'  => ['60s', 'jazz'] ];
+          'tags'  => ['60s', 'jazz'] ];
 
 printf("%s: [%s]\n",
   $song['title'],
