@@ -1,17 +1,6 @@
 <?php
 require_once(__DIR__.'/MyClassSongs.php');
-
-function unique($tags) {
-  if(sizeof($tags) <= 1) return $tags;
-  else {
-    $head = array_shift($tags);
-    $exclude = array_values(
-      array_diff($tags, [$head]));
-    return array_merge(
-      [$head], unique($exclude)
-    );
-  }
-}
+require_once(__DIR__.'/MyHelperUnique.php');
 
 $tagss = array_map(
   function ($song) { return $song->tags; },
