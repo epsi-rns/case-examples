@@ -1,17 +1,8 @@
 require_relative 'MySongs'
-include Songs
+require_relative 'MyHelperUnique'
+include HelperUnique
 
-def unique(tags)
-  if tags.length() <= 1 then
-    tags
-  else
-    head, *tail = tags
-    tail.delete(head)
-    return [head] + unique(tail)
-  end
-end
-
-tags = SONGS
+tags = Songs::SONGS
   .map { |song| song['tags'] }
   .compact.flatten
 
