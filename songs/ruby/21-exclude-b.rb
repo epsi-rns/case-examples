@@ -6,4 +6,4 @@ def exclude(val, tags)
   tags
 end
 
-puts "#{exclude('rok', tags)}"
+puts "#{exclude('rock', tags)}"
