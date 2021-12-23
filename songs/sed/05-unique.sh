@@ -8,9 +8,7 @@ exec sed -E '
 N
 $!b label
 
-s/,/ /g
-s/  */ /g
-s/\n ?/ /g
+s/(,|  *|\n ?)/ /g
 s/^ //g
 
 s/ /\n/g
