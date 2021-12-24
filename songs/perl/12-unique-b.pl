@@ -8,17 +8,10 @@ use lib dirname(__FILE__);
 
 use MySongs;
 use MyHelperFlatten;
+use MyHelperUnique;
 
-sub unique {
-  my %seen;
-  grep !$seen{$_}++, @_;
-}
-
-say join(":", 
-  unique(
+say join(':',
+  MyHelperUnique::unique(
     MyHelperFlatten::flatten(
       @MySongs::songs
 )));
-
-
-
