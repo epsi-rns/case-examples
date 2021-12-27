@@ -7,8 +7,8 @@ my @tags = ('rock',
   'jazz', 'rock', 'pop', 'pop');
 
 sub exclude {
-  my $value = shift;
-  grep(!/$value/, @_);
+  my ($value, @tags) = @_;
+  grep(!/$value/, @tags);
 }
 
 say join(':', exclude('rock', @tags));
