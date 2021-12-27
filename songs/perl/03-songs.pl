@@ -12,7 +12,7 @@ my @songs = (
     tags  => ['70s', 'rock'] },
   { title => 'Emotion',
     tags  => ['70s', 'pop'] },
-  { title => 'The River'},
+  { title => 'The River'}
 );
 
 for my $song ( @songs ) {
