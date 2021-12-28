@@ -15,10 +15,10 @@ my @songs = (
   { title => 'The River'}
 );
 
-for my $song ( @songs ) {
-  my %song_hash = %$song;
+for (@songs) {
+  my %song_hash = %$_;
   
-  if (exists($song_hash{'tags'})) {
+  if (exists $song_hash{'tags'}) {
     my $tags = $song_hash{'tags'};
     say $song_hash{'title'} . " is "
       . join(":", @$tags);

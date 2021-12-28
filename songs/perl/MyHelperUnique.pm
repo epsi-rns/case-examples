@@ -12,7 +12,7 @@ sub unique {
     my @tail = @_;
 
     # recursive unique
-    my @xcld = grep(!/$head/, @tail);    
+    my @xcld = grep(!/$head/, @tail);
     my @uniq = unique(@xcld);
 
     # returned array

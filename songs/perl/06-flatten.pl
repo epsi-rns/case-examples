@@ -12,6 +12,3 @@ use MyHelperFlatten;
 say join(":", 
   MyHelperFlatten::flatten(
     @MySongs::songs));
-
-
-
