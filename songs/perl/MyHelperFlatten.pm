@@ -7,7 +7,7 @@ sub flatten {
   my @tagss = ();
 
   for (@_) { 
-    if (exists $_->{'tags'} ) {
+    if (exists $_->{'tags'}) {
       push @tagss, @{ $_->{'tags'} };
     }
   }

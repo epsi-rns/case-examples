@@ -4,8 +4,8 @@ use strict;
 use warnings;
 
 my %song = (
-    title  => 'Cantaloupe Island',
-    tags   => ['60s', 'jazz']
+  title  => 'Cantaloupe Island',
+  tags   => ['60s', 'jazz']
 );
 
 my $tags = $song{tags};
