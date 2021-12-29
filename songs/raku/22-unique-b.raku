@@ -2,5 +2,6 @@
 use lib $*PROGRAM.dirname;
 use MySongs;
 use MyHelperFlatten;
+use MyHelperUnique;
 
-say join ":", @songs.flatten;
+say join(':', unique(flatten(@songs)));

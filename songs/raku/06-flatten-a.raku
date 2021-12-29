@@ -11,7 +11,4 @@ for @MySongs::songs -> %song_hash {
   }
 }
 
-for (@tagss) -> @tags {
-  join(":", @tags).say;
-}
-
+join(":", @tagss.List.flat).say;
