@@ -16,6 +16,6 @@ for (@MySongs::songs) {
   }
 }
 
-for my $tags ( @tagss ) {
-  say join(":", @$tags);
+for (@tagss) {
+  say join(":", @$_);
 }
