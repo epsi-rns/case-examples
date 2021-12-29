@@ -7,5 +7,5 @@ my %song =
 
 my @tags = %song<tags>;
 say %song<title>;
-say join(":", @tags);
+say join(":", @tags.List);
 say %song<tags>[1];
