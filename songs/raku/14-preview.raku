@@ -13,7 +13,7 @@ my @songs =
 ;
 
 my @songs_tags = ((@songs
-  .grep: *.keys.grep(/tags/))
+  .grep: 'tags' ∈ *.keys)
   .map: *<tags>);
 
 my @tags = @songs_tags.List.flat.unique;
