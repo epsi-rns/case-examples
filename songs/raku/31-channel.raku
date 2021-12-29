@@ -1,11 +1,8 @@
 #!/usr/bin/raku
-
 my $c = Channel.new;
 
 my @tags = ('rock',
   'jazz', 'rock', 'pop', 'pop');
-
-my $item;
 
 start {
   @tags.map: -> $tag { $c.send: $tag; }
@@ -13,6 +10,7 @@ start {
   $c.close;
 }
 
+my $item;
 loop {
   $item = $c.receive;
   if ($item) {
@@ -21,5 +19,3 @@ loop {
     last;
   }
 }
-
-
