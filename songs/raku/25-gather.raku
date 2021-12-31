@@ -10,5 +10,4 @@ sub produce(@songs) {
 use lib $*PROGRAM.dirname;
 use MySongs;
 
-my @tags = produce(@songs);
-join(":", @tags.unique).say;
+join(":", produce(@songs).unique).say;
