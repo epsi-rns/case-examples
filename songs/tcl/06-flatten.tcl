@@ -15,4 +15,4 @@ foreach song $MySongs::Songs {
 }
 
 set tagsstr [join $tags ":"];
-puts "$tagsstr\n";
+puts "$tagsstr";

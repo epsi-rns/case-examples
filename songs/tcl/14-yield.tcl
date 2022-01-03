@@ -31,4 +31,4 @@ package require MySongs 1.0
 
 coroutine message sender $MySongs::Songs
 set tags [receiver message]
-puts "[join $tags ":"]\n"
+puts "[join $tags ":"]"

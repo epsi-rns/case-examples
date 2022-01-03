@@ -5,6 +5,6 @@ proc exclude {value tags} {
     -all -not -exact $tags $value]
 }
 
-set tags [list "rock" "jazz" "rock" "pop" "pop"];
+set tags [list "rock" "jazz" "rock" "pop" "pop"]
 
-puts "[join [exclude "rock" $tags] ":"]\n";
+puts "[join [exclude "rock" $tags] ":"]"

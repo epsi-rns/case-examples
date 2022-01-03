@@ -1,15 +1,9 @@
 #/usr/bin/tclsh
 
-proc exclude {value tags} {
-  return [lsearch -inline \
-    -all -not -exact $tags $value]
-}
-
 proc unique {tags} {
   if { [llength $tags] <= 1 } {
     return $tags
   } else {
-    # puts [llength $tags]
     set head [lindex $tags 0]
     set tail [lreplace $tags 0 0]
 
@@ -22,6 +16,6 @@ proc unique {tags} {
 }
 
 set tags [list "rock" \
-  "jazz" "rock" "pop" "pop"];
+  "jazz" "rock" "pop" "pop"]
 
-puts "[join [unique $tags] ":"]\n";
+puts "[join [unique $tags] ":"]"

@@ -25,4 +25,4 @@ foreach song $songs {
         lappend tags $tag
 }}}}
 
-puts "[join $tags ":"]\n";
+puts "[join $tags ":"]"
