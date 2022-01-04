@@ -18,7 +18,6 @@ set songs [list \
 
 puts [llength $songs] 
 
-set colours [dict create colour1 "black" colour2 "white"]
 foreach song $songs {
   puts $song
 }
