@@ -1,4 +1,11 @@
-#/usr/bin/tclsh
+namespace eval ::MyHelperUnique {
+  namespace export unique
+
+  set version 1.0
+  set MyDescription "MyHelperUnique"
+  variable home [file join [pwd]\
+    [file dirname [info script]]]
+}
 
 proc unique {tags} {
   if { [llength $tags] <= 1 } {
@@ -15,7 +22,5 @@ proc unique {tags} {
   }
 }
 
-set tags [list "rock" \
-  "jazz" "rock" "pop" "pop"]
-
-puts "[join [unique $tags] ":"]"
+package provide MyHelperUnique $MyHelperUnique::version
+package require Tcl 8.0
