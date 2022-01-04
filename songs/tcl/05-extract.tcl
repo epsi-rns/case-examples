@@ -1,4 +1,4 @@
-#!/usr/bin/tclsh
+#!/usr/bin/env tclsh
 
 lappend auto_path "./"
 package require MySongs 1.0

@@ -1,4 +1,4 @@
-#!/usr/bin/tclsh
+#!/usr/bin/env tclsh
 
 set songs [list \
   [ dict create \
@@ -13,11 +13,9 @@ set songs [list \
   [ dict create \
     title "Emotion" \
     tags  [list "70s" "pop"] ] \
-  [ dict create title "The River" ]
-];
+  [ dict create title "The River" ] ];
 
 set tags {}
-
 foreach song $songs {
   if [dict exist $song tags] {
     foreach tag [dict get $song tags] {
@@ -25,4 +23,4 @@ foreach song $songs {
         lappend tags $tag
 }}}}
 
-puts "[join $tags ":"]"
+puts [join $tags ":"]

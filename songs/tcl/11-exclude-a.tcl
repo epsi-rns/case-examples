@@ -1,8 +1,7 @@
-#/usr/bin/tclsh
+#!/usr/bin/env tclsh
 
 set tags [list "rock" \
   "jazz" "rock" "pop" "pop"]
 set tags [lsearch -inline \
   -all -not -exact $tags "rock"]
-puts "[join $tags ":"]"
-
+puts [join $tags :]

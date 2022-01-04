@@ -1,4 +1,4 @@
-#/usr/bin/tclsh
+#!/usr/bin/env tclsh
 
 proc exclude {value tags} {
   return [lsearch -inline \
@@ -7,4 +7,4 @@ proc exclude {value tags} {
 
 set tags [list "rock" "jazz" "rock" "pop" "pop"]
 
-puts "[join [exclude "rock" $tags] ":"]"
+puts [join [exclude rock $tags] :]

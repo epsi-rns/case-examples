@@ -1,4 +1,4 @@
-#!/usr/bin/tclsh
+#!/usr/bin/env tclsh
 
 proc sender {songs} {
   yield [info coroutine]
@@ -31,4 +31,4 @@ package require MySongs 1.0
 
 coroutine message sender $MySongs::Songs
 set tags [receiver message]
-puts "[join $tags ":"]"
+puts [join $tags :]
