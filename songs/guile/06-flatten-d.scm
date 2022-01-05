@@ -11,11 +11,8 @@
     (let 
       ((song-tags (assoc-ref song "tags")))
       (for-each (λ (tag)
-        (unless
-          (member tag tags-flatten)
-          (set! tags-flatten
-            (append tags-flatten (list tag)))
-        )
+        (set! tags-flatten
+          (append tags-flatten (list tag)))
       ) song-tags)
     )
   )
