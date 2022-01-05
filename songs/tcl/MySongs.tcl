@@ -15,7 +15,7 @@ set ::MySongs::Songs [list \
     title "Let It Be" \
     tags  [list "60s" "rock"] ] \
   [ dict create \
-    title "Knockin\' on Heaven\'s Door" \
+    title "Knockin' on Heaven's Door" \
     tags  [list "70s" "rock"] ] \
   [ dict create \
     title "Emotion" \
