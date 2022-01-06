@@ -8,10 +8,8 @@
   (if
     (<= (length tags) 1)
     (begin
-      (display tags)
-      (newline)
-      tags
-    )
+      (display tags) (newline)
+      tags)
     (let
       ( (head (car tags)) (tail (cdr tags)) )
       (let 
@@ -21,14 +19,8 @@
           (begin
             (display (append (list head) uniq))
             (newline)
-
             (append (list head) uniq)
-          )
-        )
-      )
-    )
-  )
-)
+))))))
 
 (unique my-tags)
 (newline)

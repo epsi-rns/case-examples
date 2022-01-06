@@ -9,8 +9,7 @@
     (<= (length tags) 1)
     (tags)
     (cdr tags)
-  )
-)
+  ))
 
 (display (unique-guard my-tags))
 (newline)

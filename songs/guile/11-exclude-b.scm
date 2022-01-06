@@ -6,5 +6,6 @@
   (delq value tags)
 )
 
-(display (string-join (delq-clone "rock" tags) ":"))
+(display (string-join
+  (delq-clone "rock" tags) ":"))
 (newline)
