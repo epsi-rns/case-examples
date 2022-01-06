@@ -2,7 +2,7 @@
   (dirname (current-filename)))
 (use-modules (my-songs))
 
-(map (λ (song)
+(for-each (λ (song)
   (if 
     (assoc "tags" song)
     (begin
