@@ -7,5 +7,4 @@
     (hash-ref song "tags"))
   ) songs))
 
-(display (string-join (flatten tagss) ":"))
-(newline)
+(displayln (string-join (flatten tagss) ":"))

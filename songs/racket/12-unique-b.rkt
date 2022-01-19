@@ -3,9 +3,8 @@
 (require "my-extract.rkt")
 (require "my-unique.rkt")
 
-(display (string-join
+(displayln (string-join
   (unique-tags
   (flatten
   (extract-songs songs))) ":"))
-(newline)
 

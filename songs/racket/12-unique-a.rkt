@@ -13,6 +13,5 @@
         (unique (remove head tail)))
 )))
 
-(display (string-join
+(displayln (string-join
   (unique tags) ":"))
-(newline)

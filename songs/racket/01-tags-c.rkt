@@ -16,4 +16,4 @@
      (first tags)
      (rest  tags)))
 
-(display tags-str)(newline)
+(displayln tags-str)

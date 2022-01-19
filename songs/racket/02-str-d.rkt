@@ -15,6 +15,6 @@
 
 (display tagss)(newline)
 
-(display (string-join
+(displayln (string-join
   (flatten tagss) ":"))
-(newline)
+

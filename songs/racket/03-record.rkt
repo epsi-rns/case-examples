@@ -5,11 +5,6 @@
   ("tags" . ("60s" "jazz"))
 ))
 
-(display song)
-(newline)
-
-(display (hash-ref song "tags"))
-(newline)
-
-(display (hash-has-key? song "tags"))
-(newline)
+(displayln song)
+(displayln (hash-ref song "tags"))
+(displayln (hash-has-key? song "tags"))

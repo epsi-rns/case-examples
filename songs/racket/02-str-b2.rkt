@@ -8,8 +8,6 @@
 ))
 
 (define tagss (flatten tags))
-(display tagss)
-(newline)
+(displayln tagss)
 
-(display (string-join tagss ":"))
-(newline)
+(displayln (string-join tagss ":"))

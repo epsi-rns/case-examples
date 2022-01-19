@@ -3,6 +3,5 @@
 (define tags (list
   "rock" "jazz" "rock" "pop" "pop"))
 
-(display (string-join
+(displayln (string-join
   (remove "rock" tags) ":"))
-(newline)

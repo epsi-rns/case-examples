@@ -10,10 +10,8 @@
 ))
 
 (define tagss (concatenate tags))
-(display tagss)
-(newline)
+(displayln tagss)
 
 (define tags-str
   (string-join tagss ":"))
-(display tags-str)
-(newline)
+(displayln tags-str)
