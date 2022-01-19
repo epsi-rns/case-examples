@@ -3,7 +3,7 @@
 (define tags '(
   "rock" "jazz" "rock" "pop" "pop"))
 
-(for-each (lambda tag 
+(for-each (lambda tag
   (display (car tag))
   (display (cdr tag))
 ) tags)

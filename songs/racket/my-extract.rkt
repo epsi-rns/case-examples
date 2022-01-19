@@ -2,7 +2,7 @@
 (provide extract-songs)
 
 (define (extract-songs songs)
-  (filter-map (lambda (song)
+  (filter-map (λ (song)
     (and (hash-has-key? song "tags")
     (hash-ref song "tags"))
   ) songs))
