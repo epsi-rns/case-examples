@@ -4,4 +4,4 @@
   "rock" "jazz" "rock" "pop" "pop"))
 
 (displayln (string-join
-  (remove "rock" tags) ":"))
+  (remove* (list "rock") tags) ":"))

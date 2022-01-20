@@ -8,5 +8,5 @@
         (head (first tags))
         (tail (rest tags)) )
       (append (list head)
-        (unique-tags (remove head tail)))
+        (unique-tags (remove* (list head) tail)))
 )))

@@ -10,7 +10,7 @@
         (head (first tags))
         (tail (rest tags)) )
       (append (list head)
-        (unique (remove head tail)))
+        (unique (remove* (list head) tail)))
 )))
 
 (displayln (string-join
