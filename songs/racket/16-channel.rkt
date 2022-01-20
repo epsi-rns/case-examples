@@ -17,10 +17,10 @@
       (when
         (hash-has-key? song "tags")
         (for-each (λ (tag)
-          (channel-put my-chan tag))
+          (channel-put chan tag))
           (hash-ref song "tags")))
       ) songs)
-    (channel-put my-chan null)))
+    (channel-put chan null)))
 
 ;; program entry point
 (require "my-songs.rkt")
