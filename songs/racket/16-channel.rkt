@@ -1,7 +1,4 @@
 #lang racket
-(require "my-songs.rkt")
-
-(define my-chan (make-channel))
 
 (define (receiver chan)
   (define tags (list))
@@ -30,6 +27,9 @@
 )
 
 ;; program entry point
+(require "my-songs.rkt")
+
+(define my-chan (make-channel))
 
 (define my-thread (thread
   (lambda () (displayln (string-join
@@ -39,4 +39,3 @@
   ))))
 (sender my-chan songs)
 (thread-wait my-thread)
-
