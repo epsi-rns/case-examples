@@ -6,9 +6,9 @@ function is_exist(
   element: string; tags: TTags): boolean;
 var tag: string;
 begin
-  is_exist := false;
+  result := false;
   for tag in tags do
-    if (tag = element) then is_exist := true;
+    if (tag = element) then result := true;
 end;
 
 var
