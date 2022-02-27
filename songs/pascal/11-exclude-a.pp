@@ -6,12 +6,12 @@ const tags : TTags =
   ('rock', 'jazz', 'rock', 'pop', 'pop');
 
 function exclude(
-  element: string; elements: TTags): TTags;
+  value: string; elements: TTags): TTags;
 var i  : integer;
 begin
   i := high(elements);
   repeat
-    if elements[i] = element then
+    if elements[i] = value then
       delete(elements, i, 1);
     dec(i);
   until i < 0;

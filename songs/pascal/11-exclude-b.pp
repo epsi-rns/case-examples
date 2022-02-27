@@ -6,13 +6,13 @@ const tags : TTags =
   ('rock', 'jazz', 'rock', 'pop', 'pop');
 
 function exclude(
-  element: string; elements: TTags): TTags;
-var tag : string;
+  value: string; elements: TTags): TTags;
+var element : string;
 begin
   result := [];
-  for tag in tags do
-    if tag <> element then
-      insert(tag, result, high(result)+1);
+  for element in elements do
+    if value <> element then
+      insert(element, result, high(result)+1);
 end;
 
 var xcld: TTags;
