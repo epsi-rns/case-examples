@@ -5,14 +5,12 @@ var
   song  : TSong;
   tags  : TTags = ();
   unique: TTags = ();
-  tag, uni : ansistring;
+  tag, uni : string;
   exist : boolean;
 
 begin
   for song in songs do
-  begin
     insert(song.tags, tags, high(tags)+1);
-  end;
 
   for tag in tags do
   begin

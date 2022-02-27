@@ -9,14 +9,10 @@ var
 
 begin
   for song in songs do
-  begin
     insert(song.tags, tagss, high(tagss)+1);
-  end;
 
   for tags in tagss do
-  begin
     insert(tags, flatten, high(flatten)+1);
-  end;
 
   writeln(string.join(', ', flatten));
 end.
