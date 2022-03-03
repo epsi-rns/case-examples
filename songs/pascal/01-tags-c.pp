@@ -3,12 +3,12 @@
 uses SysUtils;
 
 const
-  tags : array of string =
+  Tags : array of string =
     ('rock', 'jazz', 'rock', 'pop', 'pop');
 var
-  s: string = '';
+  S: string = '';
 
 begin 
-  writeln(s.join(', ', tags));
+  WriteLn(S.Join(', ', Tags));
 end.
 

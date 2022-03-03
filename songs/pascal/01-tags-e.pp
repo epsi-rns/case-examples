@@ -1,24 +1,24 @@
-const
-  tags : array of string =
-    ('rock', 'jazz', 'rock', 'pop', 'pop');
-
-function dump_array(tags: array of string): string;
+function DumpArray(Tags: array of string): string;
 var
-  index, last: integer;
-  s: string = '';
+  Index, Last: integer;
+  S: string = '';
 begin
-  last := length(tags)-1;
-  for index := 0 to last do
+  Last := length(Tags)-1;
+  for Index := 0 to Last do
   begin
-    s := s + tags[index];
-    if (index<>last) then
-      s := s + ', '
+    S := S + Tags[Index];
+    if Index<>Last then
+      S := S + ', '
     else 
-      s := s + '.';
+      S := S + '.';
   end;
-  dump_array := s;
+  Result := S;
 end;
 
+const
+  Tags : array of string =
+    ('rock', 'jazz', 'rock', 'pop', 'pop');
+
 begin
-  writeln(dump_array(tags));
+  WriteLn(DumpArray(Tags));
 end.

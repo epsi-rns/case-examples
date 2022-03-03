@@ -1,13 +1,13 @@
 {$mode objfpc}{$H+}
 uses SysUtils, MySongs;
-var song: TSong;
+var Song: TSong;
 
 begin
-  for song in songs do
+  for Song in Songs do
   begin
-    write(format('%-20s',
-      [song.title]) + ': ');
-    writeln(string.join(
-      ', ', song.tags));
+    Write(format('%-20s',
+      [Song.Title]) + ': ');
+    WriteLn(string.Join(
+      ', ', Song.Tags));
   end;
 end.

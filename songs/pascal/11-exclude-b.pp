@@ -2,21 +2,21 @@
 uses SysUtils;
 
 type TTags = array of string;
-const tags : TTags =
+const Tags : TTags =
   ('rock', 'jazz', 'rock', 'pop', 'pop');
 
-function exclude(
-  value: string; elements: TTags): TTags;
-var element : string;
+function Exclude(
+  Value: string; Elements: TTags): TTags;
+var Element : string;
 begin
-  result := [];
-  for element in elements do
-    if value <> element then
-      insert(element, result, high(result)+1);
+  Result := [];
+  for Element in Elements do
+    if Value <> Element then
+      Insert(Element, Result, High(Result)+1);
 end;
 
-var xcld: TTags;
+var Xcld: TTags;
 begin
-  xcld := exclude('rock', tags);
-  writeln(string.join(', ', xcld));
+  Xcld := Exclude('rock', Tags);
+  WriteLn(string.join(', ', Xcld));
 end.

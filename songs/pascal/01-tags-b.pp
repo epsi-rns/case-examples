@@ -1,10 +1,10 @@
 uses SysUtils;
 
 const
-  tags : array of ansistring =
+  Tags : array of ANSIString =
     ('rock', 'jazz', 'rock', 'pop', 'pop');
 
 begin 
-  writeln(ansistring.join(', ', tags));
+  WriteLn(ANSIString.Join(', ', Tags));
 end.
 

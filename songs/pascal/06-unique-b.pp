@@ -2,30 +2,30 @@
 uses SysUtils, MySongs;
 type TTags = array of string;
 
-function is_exist(
-  element: string; tags: TTags): boolean;
-var tag: string;
+function IsExist(
+  Element: string; Tags: TTags): boolean;
+var Tag: string;
 begin
-  result := false;
-  for tag in tags do
-    if (tag = element) then result := true;
+  Result := false;
+  for Tag in Tags do
+    if (Tag = Element) then Result := true;
 end;
 
 var
-  song  : TSong;
-  tags  : TTags = ();
-  unique: TTags = ();
-  tag   : string;
+  Song  : TSong;
+  Tags  : TTags = ();
+  Unique: TTags = ();
+  Tag   : string;
 
 begin
-  for song in songs do
-    insert(song.tags, tags, high(tags)+1);
+  for Song in Songs do
+    Insert(Song.Tags, Tags, High(Tags)+1);
 
-  for tag in tags do
+  for Tag in tags do
   begin
-    if (not is_exist(tag, unique)) then
-      insert(tag, unique, high(unique)+1);
+    if (not IsExist(Tag, Unique)) then
+      Insert(Tag, Unique, High(Unique)+1);
   end;
 
-  writeln(string.join(', ', unique));
+  WriteLn(string.Join(', ', Unique));
 end.

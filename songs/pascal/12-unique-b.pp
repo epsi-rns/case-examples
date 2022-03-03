@@ -3,37 +3,37 @@ uses SysUtils, MySongs;
 
 type TTags = array of string;
 
-function exclude(
-  value: string; elements: TTags): TTags;
-var element : string;
+function Exclude(
+  Value: string; Elements: TTags): TTags;
+var Element : string;
 begin
-  result := [];
-  for element in elements do
-    if value <> element then
-      insert(element, result, high(result)+1);
+  Result := [];
+  for Element in Elements do
+    if Value <> Element then
+      Insert(Element, Result, High(Result)+1);
 end;
 
-function unique(elements: TTags): TTags;
-var head: string;
+function Unique(Elements: TTags): TTags;
+var Head: string;
 begin
-  if length(elements) <= 1 then
-    result := elements
+  if length(Elements) <= 1 then
+    Result := Elements
   else
   begin
-    head := elements[0];
-    delete(elements, 0, 1); // tail
+    Head := Elements[0];
+    Delete(Elements, 0, 1); // tail
 
-    result := unique(exclude(head, elements));
-    insert(head, result, 0);
+    Result := Unique(Exclude(Head, Elements));
+    insert(Head, Result, 0);
   end
 end;
 
 var
-  song  : TSong;
-  tags  : TTags = ();
+  Song  : TSong;
+  Tags  : TTags = ();
 begin
-  for song in songs do
-    insert(song.tags, tags, high(tags)+1);
+  for Song in Songs do
+    Insert(Song.Tags, Tags, High(Tags)+1);
 
-  writeln(string.join(', ', unique(tags)));
+  WriteLn(string.Join(', ', Unique(Tags)));
 end.

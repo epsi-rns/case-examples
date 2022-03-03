@@ -1,17 +1,17 @@
 uses Classes, SysUtils;
 
 const
-  s : AnsiString = 'rock:jazz:rock:pop:pop';
+  S : ANSIString = 'rock:jazz:rock:pop:pop';
 
 var
-  sl : TStrings;
-  sa : TStringArray;
+  SL : TStrings;
+  SA : TStringArray;
 begin
-  sl := TStringList.Create;  
-  sl.AddStrings(s.split(':'));
+  SL := TStringList.Create;  
+  SL.AddStrings(S.Split(':'));
 
-  sa := sl.ToStringArray(0, 4);
-  writeln(AnsiString.join(', ', sa) + '.');
+  SA := SL.ToStringArray(0, 4);
+  WriteLn(AnsiString.Join(', ', SA) + '.');
 
-  sl.Free;
+  SL.Free;
 end.

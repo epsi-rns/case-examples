@@ -2,25 +2,25 @@
 uses SysUtils;
 
 type TTags = array of string;
-const tags : TTags =
+const Tags : TTags =
   ('rock', 'jazz', 'rock', 'pop', 'pop');
 
-function exclude(
-  value: string; elements: TTags): TTags;
-var i  : integer;
+function Exclude(
+  Value: string; Elements: TTags): TTags;
+var I  : integer;
 begin
-  i := high(elements);
+  I := High(Elements);
   repeat
-    if elements[i] = value then
-      delete(elements, i, 1);
-    dec(i);
+    if Elements[I] = Value then
+      Delete(Elements, I, 1);
+    Dec(i);
   until i < 0;
 
-  result := elements;
+  Result := Elements;
 end;
 
-var xcld: TTags;
+var Xcld: TTags;
 begin
-  xcld := exclude('rock', tags);
-  writeln(string.join(', ', xcld));
+  Xcld := Exclude('rock', Tags);
+  WriteLn(string.Join(', ', Xcld));
 end.

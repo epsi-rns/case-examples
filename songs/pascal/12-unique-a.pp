@@ -2,41 +2,41 @@
 uses SysUtils;
 
 type TTags = array of string;
-const tags : TTags =
+const Tags : TTags =
   ('rock', 'jazz', 'rock', 'pop', 'pop');
 
-function exclude(
-  value: string; elements: TTags): TTags;
-var element : string;
+function Exclude(
+  Value: string; Elements: TTags): TTags;
+var Element : string;
 begin
-  result := [];
-  for element in elements do
-    if value <> element then
-      insert(element, result, high(result)+1);
+  Result := [];
+  for Element in Elements do
+    if Value <> Element then
+      Insert(Element, Result, High(Result)+1);
 end;
 
-function unique(elements: TTags): TTags;
+function Unique(Elements: TTags): TTags;
 var
-  xcld, tail: TTags;
-  head: string;
+  Xcld, Tail: TTags;
+  Head: string;
 begin
-  if length(elements) <= 1 then
-    result := elements
+  if length(Elements) <= 1 then
+    Result := Elements
   else
   begin
-    head := elements[0];
-    tail := elements;
-    delete(tail, 0, 1);
+    Head := Elements[0];
+    Tail := Elements;
+    Delete(Tail, 0, 1);
 
-    xcld := exclude(head, tail);
-    result := unique(xcld);
-    insert(head, result, 0);
+    Xcld := Exclude(Head, Tail);
+    Result := Unique(Xcld);
+    Insert(Head, Result, 0);
   end
 end;
 
 var
-  uniq: TTags;
+  Uniq: TTags;
 begin
-  uniq := unique(tags);
-  writeln(string.join(', ', uniq));
+  Uniq := Unique(Tags);
+  WriteLn(string.Join(', ', Uniq));
 end.

@@ -2,24 +2,24 @@
 uses SysUtils, MySongs;
 type TTags = array of string;
 var
-  song  : TSong;
-  tags  : TTags = ();
-  unique: TTags = ();
-  tag, uni : string;
-  exist : boolean;
+  Song  : TSong;
+  Tags  : TTags = ();
+  Unique: TTags = ();
+  Tag, Uni : string;
+  Exist : boolean;
 
 begin
-  for song in songs do
-    insert(song.tags, tags, high(tags)+1);
+  for Song in Songs do
+    insert(Song.Tags, Tags, High(Tags)+1);
 
-  for tag in tags do
+  for Tag in Tags do
   begin
-    exist := false;
-    for uni in unique do
-      if (tag = uni) then exist := true;
-    if (not exist) then
-      insert(tag, unique, high(unique)+1);
+    Exist := false;
+    for Uni in Unique do
+      if (Tag = Uni) then Exist := true;
+    if (not Exist) then
+      Insert(Tag, Unique, High(Unique)+1);
   end;
 
-  writeln(string.join(', ', unique));
+  WriteLn(string.Join(', ', Unique));
 end.

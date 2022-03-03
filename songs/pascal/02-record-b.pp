@@ -2,16 +2,16 @@
 uses SysUtils;
 
 type TSong = record
-  title : string;
-  tags  : array of string;
+  Title : string;
+  Tags  : array of string;
 end;
 
 const
-  song : TSong =
-  ( title : 'Cantaloupe Island';
-    tags  : ('60s', 'jazz') );
+  Song : TSong =
+  ( Title : 'Cantaloupe Island';
+    Tags  : ('60s', 'jazz') );
 
 begin 
-  write(song.title + ': ');
-  writeln(string.join(', ', song.tags));
+  Write(Song.Title + ': ');
+  WriteLn(string.Join(', ', Song.Tags));
 end.

@@ -1,11 +1,11 @@
 const
-  tags : array [0..4] of string =
+  Tags : array [0..4] of string =
     ('rock', 'jazz', 'rock', 'pop', 'pop');
 var
-  i: integer;
+  I: integer;
 
 begin
-  for i := 0 to 4 do
-    write(tags[i] + ' ');
-  writeln();
+  for I := 0 to 4 do
+    Write(Tags[I] + ' ');
+  WriteLn();
 end.

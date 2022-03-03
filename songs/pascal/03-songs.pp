@@ -2,33 +2,32 @@
 uses SysUtils;
 
 type TSong = record
-  title : string;
-  tags  : array of string;
+  Title : string;
+  Tags  : array of string;
 end;
 
 const
-  songs : array of TSong =
-  ( ( title : 'Cantaloupe Island';
-      tags  : ('60s', 'jazz') ),
-    ( title : 'Let It Be';
-      tags  : ('60s', 'rock') ),
-    ( title : 'Knockin'' on Heaven''s Door';
-      tags  : ('70s', 'rock') ),
-    ( title : 'Emotion';
-      tags  : ('70s', 'pop') ),
-    ( title : 'The River';
-      tags  : () )
+  Songs : array of TSong =
+  ( ( Title : 'Cantaloupe Island';
+      Tags  : ('60s', 'jazz') ),
+    ( Title : 'Let It Be';
+      Tags  : ('60s', 'rock') ),
+    ( Title : 'Knockin'' on Heaven''s Door';
+      Tags  : ('70s', 'rock') ),
+    ( Title : 'Emotion';
+      Tags  : ('70s', 'pop') ),
+    ( Title : 'The River';
+      Tags  : () )
   );
 
-var
-  song: TSong;
+var Song: TSong;
 
 begin
-  for song in songs do
+  for Song in Songs do
   begin
-    write(format('%-20s',
-      [song.title]) + ': ');
-    writeln(string.join(
-      ', ', song.tags));
+    Write(format('%-20s',
+      [Song.Title]) + ': ');
+    WriteLn(string.Join(
+      ', ', Song.Tags));
   end;
 end.

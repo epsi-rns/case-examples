@@ -2,12 +2,12 @@
 uses SysUtils, MySongs;
 
 var
-  song: TSong;
-  tags: array of string = ();
+  Song: TSong;
+  Tags: array of string = ();
 
 begin
-  for song in songs do
-    insert(song.tags, tags, high(tags)+1);
+  for Song in Songs do
+    System.Insert(Song.Tags, Tags, High(Tags)+1);
 
-  writeln(string.join(', ', tags));
+  WriteLn(string.Join(', ', Tags));
 end.

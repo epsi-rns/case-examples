@@ -2,14 +2,14 @@
 uses SysUtils, MySongs;
 type TTags = array of string;
 var
-  song : TSong;
-  tags : TTags;
-  tagss: array of TTags = ();
+  Song : TSong;
+  Tags : TTags;
+  Tagss: array of TTags = ();
 
 begin
-  for song in songs do
-    insert(song.tags, tagss, high(tagss)+1);
+  for Song in Songs do
+    Insert(Song.Tags, Tagss, High(Tagss)+1);
 
-  for tags in tagss do
-    writeln(string.join(', ', tags));
+  for Tags in Tagss do
+    WriteLn(string.Join(', ', Tags));
 end.

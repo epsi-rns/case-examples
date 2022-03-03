@@ -1,19 +1,17 @@
 uses SysUtils;
 
 type TSong = record
-  title : ansistring;
-  tags  : array of ansistring;
+  Title : ANSIString;
+  Tags  : array of ANSIString;
 end;
 
-var
-  song : TSong;
-
+var Song : TSong;
 begin 
-  with song do
+  with Song do
   begin
-    title := 'Cantaloupe Island';
-    tags  := ['60s', 'jazz'];
+    Title := 'Cantaloupe Island';
+    Tags  := ['60s', 'jazz'];
   end;
-  write(song.title + ': ');
-  writeln(ansistring.join(', ', song.tags));
+  Write(Song.Title + ': ');
+  WriteLn(ANSIString.Join(', ', Song.Tags));
 end.
