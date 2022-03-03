@@ -6,7 +6,7 @@ const Tags : TTags =
   ('rock', 'jazz', 'rock', 'pop', 'pop');
 
 function Exclude(
-  Value: string; Elements: TTags): TTags;
+  const Value: string; Elements: TTags): TTags;
 var I  : integer;
 begin
   I := High(Elements);

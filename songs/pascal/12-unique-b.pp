@@ -4,7 +4,7 @@ uses SysUtils, MySongs;
 type TTags = array of string;
 
 function Exclude(
-  Value: string; Elements: TTags): TTags;
+  const Value: string; Elements: TTags): TTags;
 var Element : string;
 begin
   Result := [];

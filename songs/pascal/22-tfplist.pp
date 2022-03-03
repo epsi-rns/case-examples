@@ -1,17 +1,15 @@
-uses SysUtils, TSongs, MySongs;
+{$mode objFPC}
+
+uses 
+  SysUtils, MySongs, MySongsHelper,
+  TSongsBase, TSongs2;
 
 var
-  TS: TSongList;
-  ASong : PSong;
-  Song : TSong;
+  TS: TSongList2;
   SA : TStringArray;
 begin
-  TS := TSongList.create;
-  for Song in Songs do begin
-    ASong  := new(PSong);
-    ASong^ := TSONGS.TSong(Song);
-    TS.Add(ASong);
-  end;
+  TS := TSongList2.create;
+  ImportMySongs(Songs, TS);
 
   WriteLn(TS[2]^.Title);
   writeLn(TS.ItemsTags[1][0]);
@@ -24,5 +22,6 @@ begin
 
   TS.Free;
 end.
+
 
 
