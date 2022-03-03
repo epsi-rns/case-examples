@@ -2,7 +2,7 @@ unit MySongsHelper;
 
 interface
 
-uses TSongsBase, MySongs;
+uses MySongListBase, MySongs;
 
 procedure ImportMySongs(
   Songs: array of MySongs.TSong;
@@ -20,7 +20,7 @@ begin
   for Song in Songs do
   begin
     ASong  := new(PSong);
-    ASong^ := TSongsBase.TSong(Song);
+    ASong^ := MySongListBase.TSong(Song);
     TS.Add(ASong);
   end;
 end;

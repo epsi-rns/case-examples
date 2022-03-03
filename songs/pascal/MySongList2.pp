@@ -1,8 +1,8 @@
 {$mode objfpc}
-unit TSongs2;
+unit MySongList2;
 
 interface
-uses Classes, SysUtils, TSongsBase;
+uses Classes, SysUtils, MySongListBase;
 
 type
   TSongList2 = class(TSongListBase)

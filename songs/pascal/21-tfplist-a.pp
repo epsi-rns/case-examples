@@ -1,4 +1,4 @@
-uses TSongsBase, MySongs;
+uses MySongListBase, MySongs;
 
 var
   TS: TSongListBase;
@@ -8,7 +8,7 @@ begin
   TS := TSongListBase.create;
   for Song in Songs do begin
     ASong  := new(PSong);
-    ASong^ := TSongsBase.TSong(Song);
+    ASong^ := MySongListBase.TSong(Song);
     TS.Add(ASong);
   end;
 

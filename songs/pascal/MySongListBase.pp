@@ -1,5 +1,5 @@
 {$mode objfpc}{$H+}
-unit TSongsBase;
+unit MySongListBase;
 
 interface
 uses Classes, SysUtils;

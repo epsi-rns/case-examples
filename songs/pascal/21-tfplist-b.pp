@@ -1,4 +1,4 @@
-uses TSongsBase, MySongs, MySongsHelper;
+uses MySongListBase, MySongs, MySongsHelper;
 
 var TS: TSongListBase;
 begin

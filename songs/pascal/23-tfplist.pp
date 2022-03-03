@@ -2,7 +2,7 @@
 
 uses 
   SysUtils, MySongs, MySongsHelper,
-  TSongsBase, TSongs3;
+  MySongListBase, MySongList3;
 
 var
   TS: TSongList3;
