@@ -38,15 +38,15 @@ begin
   Messages.Add(Msg);
 end;
 
-procedure TReceiver.SetStop();
-begin
-  isStop := true;
-end;
-
 function TReceiver.GetMessage: string;
 begin
   Result := Messages[0];
   Messages.Delete(0);
+end;
+
+procedure TReceiver.SetStop();
+begin
+  isStop := true;
 end;
 
 procedure TReceiver.Execute;

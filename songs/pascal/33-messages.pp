@@ -7,7 +7,6 @@ var
   Producer : TSender;
   Consumer : TReceiver;
 
-var
   Tags : TStringArray =
     ('60s', 'jazz', '60s', 'rock',
      '70s', 'rock', '70s', 'pop');

@@ -33,14 +33,14 @@ begin
   FreeOnTerminate := True;
 end;
 
-procedure TReceiverSong.SetMessage(msg: string);
-begin
-  Messages.Add(Msg);
-end;
-
 procedure TReceiverSong.SetStop();
 begin
   isStop := true;
+end;
+
+procedure TReceiverSong.SetMessage(msg: string);
+begin
+  Messages.Add(Msg);
 end;
 
 function TReceiverSong.GetMessage: string;

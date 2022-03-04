@@ -12,7 +12,7 @@ begin
     else 
       S := S + '.';
   end;
-  Result := S;
+  DumpArray := S;
 end;
 
 const

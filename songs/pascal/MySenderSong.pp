@@ -37,7 +37,7 @@ begin
 end;
 
 procedure TSenderSong.Execute;
-var  Tag : string;
+var Tag : string;
 begin
   for Tag in Messages do
     Consumer.Msg := Tag;
