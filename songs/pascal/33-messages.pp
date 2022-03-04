@@ -13,7 +13,7 @@ var
      '70s', 'rock', '70s', 'pop');
 begin
   Consumer := TReceiver.Create(True);
-  Producer := TSender.Create(True, Tags, Consumer); 
+  Producer := TSender.Create(True, Tags, Consumer);
 
   Producer.Start;
   Consumer.Start;
