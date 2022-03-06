@@ -16,6 +16,7 @@ type
   public
     constructor Create(
       CreateSuspended : boolean);
+    destructor Destroy; override;
     procedure SetStop();
     property Msg: string
       read GetMessage write SetMessage;
@@ -31,6 +32,12 @@ begin
 
   inherited Create(CreateSuspended);
   FreeOnTerminate := True;
+end;
+
+destructor TReceiver.Destroy;
+begin
+  Messages.Free;
+  inherited Destroy;
 end;
 
 procedure TReceiver.SetMessage(msg: string);

@@ -22,6 +22,3 @@ begin
 
   TS.Free;
 end.
-
-
-

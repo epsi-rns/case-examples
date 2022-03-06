@@ -14,9 +14,9 @@ implementation
 
 function TSongList3.GetUniqueTags(): TTags;
 var
-  SL : TStringList;
-  ASong  : PSong;
-  Tag : ANSIString;
+  SL    : TStringList;
+  ASong : PSong;
+  Tag   : ANSIString;
 begin
   SL := TStringList.Create;
   SL.Duplicates := dupIgnore;

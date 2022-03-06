@@ -1,7 +1,7 @@
 Program ThreadTest;
 
 uses
-  {$ifdef unix}Cthreads, {$endif} SysUtils;
+  {$ifdef unix}CThreads, {$endif} SysUtils;
 
 const
   threadcount = 10;
