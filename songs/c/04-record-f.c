@@ -8,7 +8,7 @@ struct Song {
   tag tags[];
 } song = {
   .title = "Cantaloupe Island",
-  .tags = {"60s", "jazz"}
+  .tags  = {"60s", "jazz"}
 };
 
 int main() {

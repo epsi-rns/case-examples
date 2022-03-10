@@ -8,10 +8,10 @@ struct Song {
 } song;
 
 int main() {
-  strcpy( song.title, "Cantaloupe Island" );
+  strcpy(song.title, "Cantaloupe Island");
   puts(song.title);
 
-  strcat(song.tags[0], "60s");
-  strcat(song.tags[1], "jazz");
+  strcpy(song.tags[0], "60s");
+  strcpy(song.tags[1], "jazz");
   puts(song.tags[1]);
 }

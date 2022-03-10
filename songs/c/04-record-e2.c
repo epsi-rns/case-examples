@@ -10,13 +10,13 @@ struct Song {
 };
 
 int main() {
-  struct Song *song = malloc(
-    sizeof(char *) * (1+2));
+  struct Song *song = (struct Song *)
+    malloc(sizeof(char *) * (1+2));
 
-  song->title = "Cantaloupe Island";
+  song->title = (char*) "Cantaloupe Island";
   puts(song->title);
 
-  strcat(song->tags[0], "60s");
-  strcat(song->tags[1], "jazz");
+  strcpy(song->tags[0], "60s");
+  strcpy(song->tags[1], "jazz");
   puts(song->tags[1]);
 }

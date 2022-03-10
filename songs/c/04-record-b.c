@@ -9,7 +9,7 @@ struct Song {
 int main() {
   struct Song song;
   song.title = malloc(sizeof(char *));
-  strcpy( song.title, "Cantaloupe Island" );
+  strcpy(song.title, "Cantaloupe Island");
   puts(song.title);
 }
 
