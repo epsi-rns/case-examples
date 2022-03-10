@@ -10,7 +10,5 @@ int main () {
   str1.append(", ");
   str1.append(str2);
   cout << str1 << endl;
-
-  return 0;
 }
 

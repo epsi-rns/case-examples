@@ -1,21 +1,24 @@
 #include <iostream>
 #include <string>
+#include <sstream>
 #include <vector>
-#include <boost/algorithm/string/join.hpp>
+#include <algorithm>
 
 using namespace std;
-
-inline string tag_join(
-  vector<string> tags) {
-    return boost::algorithm::join(tags, ", ");
-}
 
 int main () {
   vector<string> tags {
     "rock", "jazz", "rock", "pop", "pop"};
+  stringstream stream;
 
-  cout << tag_join(tags) << endl;
+  if (tags.size() > 1)
+    for_each (
+      tags.begin(), tags.end()-1,
+      [&stream](string s) {
+        stream << s << ", ";
+      });
 
-  return 0;
+  stream << tags.back() << '.';
+  cout << stream.str() << endl;
 }
 

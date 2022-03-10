@@ -13,7 +13,5 @@ int main() {
   
   str = tag_str(tags, n);
   puts(str);
-
-  return 0;
 }
 

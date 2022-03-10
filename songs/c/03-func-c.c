@@ -13,7 +13,6 @@ int main() {
   char str[35];
   tag_str(str);
   printf("%s\n", str);
-  return 0;
 }
 
 void tag_str(char* str) {

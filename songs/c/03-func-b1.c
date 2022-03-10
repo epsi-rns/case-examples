@@ -6,5 +6,4 @@ char *tag_str();
 
 int main() {
   printf("%s\n", tag_str());
-  return 0;
 }

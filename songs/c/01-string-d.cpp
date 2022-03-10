@@ -11,7 +11,5 @@ int main () {
 
   stream << str1 << ", " << str2;
   cout << stream.str() << endl;
-
-  return 0;
 }
 
