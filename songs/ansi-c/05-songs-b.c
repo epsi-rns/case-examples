@@ -19,6 +19,3 @@ int main() {
   puts(songs[1].title);
   puts(songs[1].tags[1]);
 }
-
-
-

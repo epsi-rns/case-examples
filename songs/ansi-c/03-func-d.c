@@ -13,6 +13,7 @@ int main() {
   char *str;
   str = tag_str(tags, n);
   puts(str);
+  free(str);
 }
 
 char *tag_str(tag *arrtag, size_t n) {

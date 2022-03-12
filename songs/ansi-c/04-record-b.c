@@ -11,6 +11,7 @@ int main() {
   song.title = malloc(sizeof(char *));
   strcpy(song.title, "Cantaloupe Island");
   puts(song.title);
+  free(song.title);
 }
 
 

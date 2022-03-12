@@ -15,6 +15,7 @@ int main() {
   char *str;
   str = tag_str();
   puts(str);
+  free(str);
 }
 
 char *tag_str() {

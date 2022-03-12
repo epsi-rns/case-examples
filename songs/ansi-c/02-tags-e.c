@@ -23,4 +23,5 @@ int main() {
     strcat(str, (tags[++i] != NULL) ? ", " : ".");
   }
   puts(str);
+  free(tags);
 }
