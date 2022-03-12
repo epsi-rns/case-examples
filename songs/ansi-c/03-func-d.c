@@ -16,16 +16,18 @@ int main() {
   free(str);
 }
 
-char *tag_str(tag *arrtag, size_t n) {
+char *tag_str(tag *arrtag, size_t len) {
   int i;
   char *str = malloc (sizeof (char) * 35);
 
   strcpy(str, "");
 
-  for(i=0; i <= n-1; i++) {
+  for(i=0; i <= len-1; i++) {
+    if (*arrtag[i]=='\0') continue;
+    if (i > 0) strcat(str, ", ");
     strcat(str, arrtag[i]);
-    strcat(str, (i < n-1) ? ", " : ".");
   }
+  strcat(str, ".");
 
   return str;
 }

@@ -1,20 +1,19 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <algorithm>
+#include <boost/algorithm/string/join.hpp>
 
 using namespace std;
 
-void tag_out (string s) {
-  cout << s << ' ';
+inline string tag_join(
+  vector<string> tags) {
+    return boost::algorithm::join(tags, ", ");
 }
 
 int main () {
   vector<string> tags {
     "rock", "jazz", "rock", "pop", "pop"};
 
-  for_each (
-    tags.begin(), tags.end(), tag_out);
-  cout << endl;
+  cout << tag_join(tags) << endl;
 }
 

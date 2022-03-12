@@ -1,21 +1,8 @@
-// gcc -I./ tag-join.c 05-songs-c.c -o 05-songs-c
+// gcc -I ./ tag-join.c 06-module-b.c -o 06-module-b
 
 #include <stdio.h>
+#include <my-songs.h>
 #include <tag-join.h>
-
-typedef char tag[5];
-
-struct Song {
-  char *title;
-  tag tags[10];
-};
-
-struct Song songs[] = {
-    { "Cantaloupe Island",
-      {"60s", "jazz"} },
-    { "Let It Be",
-      {"60s", "rock"} }
-  };
 
 int main() {
   int i;

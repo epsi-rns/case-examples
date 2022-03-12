@@ -1,11 +1,8 @@
 #include <stdio.h>
-#include <string.h>
-
-typedef char tag[5];
 
 struct Song {
   char *title;
-  tag tags[2];
+  char tags[2][5];
 };
 
 int main() {
