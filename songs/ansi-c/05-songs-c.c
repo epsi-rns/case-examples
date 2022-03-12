@@ -3,11 +3,11 @@
 #include <stdio.h>
 #include <tag-join.h>
 
-typedef char tag[5];
+typedef char Tag[5];
 
 struct Song {
   char *title;
-  tag tags[10];
+  Tag tags[10];
 };
 
 struct Song songs[] = {

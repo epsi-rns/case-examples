@@ -1,2 +1,2 @@
-typedef char tag[5];
-char *tag_str(tag arrtag[], size_t len);
+typedef char Tag[5];
+char *tag_str(Tag arrtag[], size_t len);

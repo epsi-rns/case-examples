@@ -4,9 +4,9 @@
 #include <tag-join.h>
 
 int main() {
-  tag tags[] = {
+  Tag tags[] = {
     "rock", "jazz", "rock", "pop", "pop"};
-  size_t n = sizeof(tags)/sizeof(tag);
+  size_t n = sizeof(tags)/sizeof(Tag);
 
   char *str;
   int alloc = sizeof(tags) + n*2;

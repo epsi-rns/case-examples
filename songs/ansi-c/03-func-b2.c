@@ -1,4 +1,4 @@
-// gcc -I./ 03-func-b.c -o 03-func-b
+// gcc -I./ 03-func-b2.c -o 03-func-b2
 
 #include <stdio.h>
 #include <03-join-b.c>

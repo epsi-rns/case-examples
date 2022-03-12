@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef char tag[5];
+typedef char Tag[5];
 
 struct Song {
   char *title;
-  tag tags[];
+  Tag tags[];
 };
 
 int main() {

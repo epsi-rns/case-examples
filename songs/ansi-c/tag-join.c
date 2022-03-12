@@ -4,9 +4,9 @@
 
 #include <stdio.h>
 
-char *tag_str(tag arrtag[], size_t len) {
+char *tag_str(Tag arrtag[], size_t len) {
   int i;
-  char *str = malloc(len*(sizeof(tag)+2));
+  char *str = malloc(len*(sizeof(Tag)+2));
 
   strcpy(str, "");
 
