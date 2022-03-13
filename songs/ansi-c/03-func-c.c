@@ -17,12 +17,13 @@ int main() {
 
 void tag_str(char* str) {
   int i;
-  size_t n = sizeof(tags)/sizeof(Tag);
+  size_t len_tags =
+    sizeof(tags) / sizeof(Tag);
 
   strcpy(str, "");
 
-  for(i=0; i <= n-1; i++) {
+  for(i = 0; i <= len_tags-1; i++) {
     strcat(str, tags[i]);
-    strcat(str, (i < n-1) ? ", " : ".");
+    strcat(str, (i < len_tags-1) ? ", " : ".");
   }
 }

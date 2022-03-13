@@ -17,8 +17,8 @@ int main() {
   printf("tags    : %d\n", sizeof(tags));
   printf("tags[0] : %d\n", sizeof(tags[0]));
 
-  size_t n = sizeof(tags)/sizeof(Tag);
-  printf("length  : %d\n", n);
+  size_t len_tags = sizeof(tags) / sizeof(Tag);
+  printf("length  : %d\n", len_tags);
 
   free(tags);
 }

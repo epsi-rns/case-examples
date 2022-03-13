@@ -6,12 +6,13 @@
 int main() {
   Tag tags[] = {
     "rock", "jazz", "rock", "pop", "pop"};
-  size_t n = sizeof(tags)/sizeof(Tag);
+  size_t len_tags =
+    sizeof(tags) / sizeof(Tag);
 
   char *str;
-  int alloc = sizeof(tags) + n*2;
+  int alloc = sizeof(tags) + len_tags*2;
   
-  str = tag_str(tags, n);
+  str = tag_str(tags, len_tags);
   puts(str);
 }
 

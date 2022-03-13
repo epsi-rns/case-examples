@@ -8,10 +8,11 @@ char *tag_str(Tag *arrtag, size_t n);
 int main() {
   Tag tags[] = {
     "rock", "jazz", "rock", "pop", "pop"};
-  size_t n = sizeof(tags)/sizeof(Tag);
+  size_t len_tags =
+    sizeof(tags) / sizeof(Tag);
 
   char *str;
-  str = tag_str(tags, n);
+  str = tag_str(tags, len_tags);
   puts(str);
   free(str);
 }
@@ -22,8 +23,8 @@ char *tag_str(Tag *arrtag, size_t len) {
 
   strcpy(str, "");
 
-  for(i=0; i <= len-1; i++) {
-    if (*arrtag[i]=='\0') continue;
+  for(i = 0; i <= len-1; i++) {
+    if (*arrtag[i] == '\0') continue;
     if (i > 0) strcat(str, ", ");
     strcat(str, arrtag[i]);
   }

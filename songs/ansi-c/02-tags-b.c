@@ -9,9 +9,9 @@ Tag tags[] = {
 int main() {
   int i;
   char str[35] = "";
-  size_t n = sizeof(tags)/sizeof(Tag);
+  size_t n = sizeof(tags) / sizeof(Tag);
 
-  for(i=0; i <= n-1; i++) {
+  for(i = 0; i <= n-1; i++) {
     strcat(str, tags[i]);
     strcat(str, (i < n-1) ? ", " : ".");
   }

@@ -5,18 +5,19 @@
 #include <tag-join.h>
 
 int main() {
-  int i;
+  int cur; // current cursor
   struct Song song;
-  size_t n, m;
+  size_t len_songs, len_tags;
 
-  n = sizeof(songs)/sizeof(songs[0]);
+  len_songs = sizeof(songs)
+            / sizeof(songs[0]);
 
-  for(i=0; i <= n-1; i++) {
+  for(cur = 0; cur <= len_songs-1; cur++) {
     song = songs[i];
-    m = sizeof(song.tags)
-      / sizeof(song.tags[0]);
+    len_tags = sizeof(song.tags)
+             / sizeof(Tag);
 
     printf("%s: ", song.title);
-    printf("%s\n", tag_str(song.tags, m));
+    printf("%s\n", tag_str(song.tags, len_tags));
   }
 }

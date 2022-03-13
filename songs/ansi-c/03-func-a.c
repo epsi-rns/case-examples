@@ -21,13 +21,14 @@ int main() {
 char *tag_str() {
   int i;
   char str[35];
-  size_t n = sizeof(tags)/sizeof(Tag);
+  size_t len_tags =
+    sizeof(tags) / sizeof(Tag);
 
   strcpy(str, "");
 
-  for(i=0; i <= n-1; i++) {
+  for(i = 0; i <= len_tags-1; i++) {
     strcat(str, tags[i]);
-    strcat(str, (i < n-1) ? ", " : ".");
+    strcat(str, (i < len_tags-1) ? ", " : ".");
   }
 
   char *result = malloc (sizeof (char) * 35);
