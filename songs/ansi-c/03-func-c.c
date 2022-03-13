@@ -15,7 +15,7 @@ int main() {
   printf("%s\n", str);
 }
 
-void tag_str(char* str) {
+void tag_str(char *str) {
   int i;
   size_t len_tags =
     sizeof(tags) / sizeof(Tag);
