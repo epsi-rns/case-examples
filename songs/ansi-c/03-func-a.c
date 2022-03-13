@@ -4,9 +4,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-typedef char Tag[5];
-
-Tag tags[] = {
+char *tags[5] = {
   "rock", "jazz", "rock", "pop", "pop"};
 
 char *tag_str();
@@ -22,7 +20,7 @@ char *tag_str() {
   int i;
   char str[35];
   size_t len_tags =
-    sizeof(tags) / sizeof(Tag);
+    sizeof(tags) / sizeof(tags[0]);
 
   strcpy(str, "");
 

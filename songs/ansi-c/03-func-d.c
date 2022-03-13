@@ -2,14 +2,13 @@
 #include <string.h>
 #include <stdlib.h>
 
-typedef char Tag[5];
-char *tag_str(Tag *arrtag, size_t n);
+char *tag_str(char **arrtag, size_t n);
 
 int main() {
-  Tag tags[] = {
+  char *tags[5] = {
     "rock", "jazz", "rock", "pop", "pop"};
   size_t len_tags =
-    sizeof(tags) / sizeof(Tag);
+    sizeof(tags) / sizeof(tags[0]);
 
   char *str;
   str = tag_str(tags, len_tags);
@@ -17,7 +16,7 @@ int main() {
   free(str);
 }
 
-char *tag_str(Tag *arrtag, size_t len) {
+char *tag_str(char **arrtag, size_t len) {
   int i;
   char *str = malloc (sizeof (char) * 35);
 

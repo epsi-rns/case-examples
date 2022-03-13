@@ -2,15 +2,13 @@
 #include <string.h>
 #include <stdlib.h>
 
-typedef char Tag[5];
-
-Tag tags[] = {
+char *tags[5] = {
   "rock", "jazz", "rock", "pop", "pop"};
 
 char *tag_str() {
   int i;
   char *str = malloc (sizeof (char) * 35);
-  size_t n = sizeof(tags)/sizeof(Tag);
+  size_t n = sizeof(tags)/sizeof(tags[0]);
 
   strcpy(str, "");
 
