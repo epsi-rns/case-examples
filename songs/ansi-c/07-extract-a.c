@@ -16,7 +16,7 @@ int main() {
   len_songs = sizeof(songs)
             / sizeof(songs[0]);
 
-  for(i = 0; i <= len_songs-1; i++) {
+  for(i = 0; i < len_songs; i++) {
     song = songs[i];
 
     len_tags  = sizeof(song.tags) / sizeof(Tag);

@@ -23,7 +23,7 @@ char *tag_str(Tag *arrtag, size_t len) {
 
   strcpy(str, "");
 
-  for(i = 0; i <= len-1; i++) {
+  for(i = 0; i < len; i++) {
     if (*arrtag[i] == '\0') continue;
     if (i > 0) strcat(str, ", ");
     strcat(str, arrtag[i]);

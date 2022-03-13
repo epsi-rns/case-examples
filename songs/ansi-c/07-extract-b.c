@@ -37,7 +37,7 @@ int main() {
       tags_all = realloc(tags_all,
         sizeof(Tag) * (len_total + len_each));
 
-      for(add = 0; add <= len_each-1; add++)
+      for(add = 0; add < len_each; add++)
         strcpy(
           tags_all[len_total+add],
           tags_each[add]);

@@ -14,7 +14,7 @@ char *tag_str() {
 
   strcpy(str, "");
 
-  for(i = 0; i <= n-1; i++) {
+  for(i = 0; i < n; i++) {
     strcat(str, tags[i]);
     strcat(str, (i < n-1) ? ", " : ".");
   }

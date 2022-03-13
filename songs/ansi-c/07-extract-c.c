@@ -23,7 +23,7 @@ int main() {
   len_songs = sizeof(songs)
             / sizeof(songs[0]);
 
-  for(cur = 0; cur <= len_songs-1; cur++) {
+  for(cur = 0; cur < len_songs; cur++) {
     song = songs[cur];
 
     len_tags  = sizeof(song.tags)
@@ -41,5 +41,3 @@ int main() {
   tag_string = tag_str(tags_all, len_total);
   printf("%s\n", tag_string);
 }
-
-

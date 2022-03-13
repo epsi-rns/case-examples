@@ -22,7 +22,7 @@ void tag_str(char* str) {
 
   strcpy(str, "");
 
-  for(i = 0; i <= len_tags-1; i++) {
+  for(i = 0; i < len_tags; i++) {
     strcat(str, tags[i]);
     strcat(str, (i < len_tags-1) ? ", " : ".");
   }
