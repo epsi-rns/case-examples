@@ -1,11 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 
-typedef char Tag[5];
-
 struct Song {
   char *title;
-  Tag tags[];
+  char *tags[5];
 } song = {
   .title = "Cantaloupe Island",
   .tags  = {"60s", "jazz"}
