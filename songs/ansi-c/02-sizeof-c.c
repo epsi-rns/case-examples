@@ -13,7 +13,7 @@ int main() {
   tags[2] = "rock";
   tags[3] = "pop";
   tags[4] = "pop";
-  tags[5] = "disco";
+  tags[5] = "punk";
 
   printf("Tag*6   : %d\n", sizeof(Tag) * 6);
   printf("tags    : %d\n", sizeof(tags));

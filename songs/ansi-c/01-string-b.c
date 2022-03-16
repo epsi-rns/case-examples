@@ -6,7 +6,7 @@ int main () {
   char *str2 = "Earth";
   char str3[16];
 
-  pstr1 = "Hello";
+  str1 = "Hello";
   strcpy(str3, "");
 
   strcat(str3, str1);

@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 typedef char Tag[5];
 
@@ -11,7 +12,7 @@ int main() {
   strcpy(tags[2], "rock");
   strcpy(tags[3], "pop");
   strcpy(tags[4], "pop");
-  strcpy(tags[5], "disco");
+  strcpy(tags[5], "punk");
 
   printf("Tag*6   : %d\n", sizeof(Tag) * 6);
   printf("tags    : %d\n", sizeof(tags));
